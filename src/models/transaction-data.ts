@@ -1,7 +1,8 @@
 export class TransactionData{
-  id: number;
-  rate: number;
-  amount: number;
-  quantity: number;
+  id: string;
+  rate: string;
+  amount: string;
+  quantity: string;
   action: string;
+  date: string;
 }

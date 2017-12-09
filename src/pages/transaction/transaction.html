@@ -8,4 +8,27 @@
 
 <ion-content padding>
 
+    <div class="table-responsive">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+            <tr>
+                <th class="th">No.</th>
+                <th class="th">Rate</th>
+                <th class="th">Amount</th>
+                <th class="th">Coins</th>
+                <th class="th">Action</th>
+            </tr>
+            <!-- <tr *ngIf="noUserData">
+              <td colspan="4" class="td">No data available</td>
+            </tr> -->
+            <tr *ngFor="let tran of transaction">
+                <td class="td">4545</td>
+                <td class="td">3443</td>
+                <td class="td">433</td>
+                <td class="td">434</td>
+                <td class="td">45</td>
+            </tr>
+
+        </table>
+    </div>
+
 </ion-content>

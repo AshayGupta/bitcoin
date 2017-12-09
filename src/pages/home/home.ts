@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import { TransactionData } from '../../models/transaction-data';
 import { Util } from '../../providers/util';
-import { String } from '../../providers/constants';
+import { StringConstant, ToastConstant, ErrorMsg } from '../../providers/constants';
 import { Database } from '../../providers/database';
 
 @Component({
@@ -22,7 +22,7 @@ export class HomePage {
   }
 
   private depositClicked(){
-    
+
   }
 
   private buyClicked(){
@@ -37,13 +37,13 @@ export class HomePage {
 
   private validate(){
     if(this.util.isBlank(this.transaction.rate)){
-      this.util.showToast(this.toastMsg, String.TOASTBOTTOM, true, String.OK)
+      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
     }
     else if(this.util.isBlank(this.transaction.amount)){
-      this.util.showToast(this.toastMsg, String.TOASTBOTTOM, true, String.OK)
+      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
     }
     else if(this.util.isBlank(this.transaction.quantity)){
-      this.util.showToast(this.toastMsg, String.TOASTBOTTOM, true, String.OK)
+      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
     }
     else{
       this.saveData()
@@ -51,7 +51,11 @@ export class HomePage {
   }
 
   private saveData(){
-
+    this.database.insertTransactionData(this.transaction).then((data) => {
+      this.util.showToast("Data Saved", ToastConstant.TOAST_BOTTOM, )
+    },(error) => {
+      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_BOTTOM, )
+    })
   }
 
 }

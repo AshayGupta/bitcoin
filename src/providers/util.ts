@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 
-import { ToastController, LoadingController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 @Injectable()
 export class Util {
@@ -10,18 +10,26 @@ export class Util {
   }
 
   public isBlank(str: any) {
-      if (str == null || str == 'null') {
+      if (str == null || str == 'null' || str == undefined || str == 'undefined') {
           return true;
-      }else if (str.trim().length == 0) {
+      } else if (str.trim().length == 0) {
           return true;
-      }else if (str == undefined || str == 'undefined') {
-          return true;
-      }else {
+      } else {
           return false;
       }
   }
 
-  public showToast(msg: string, position: string, showCloseButton: boolean, closeButtonText: string) {
+  public showToast(msg: string, position: string) {
+      let toast = this.toastCtrl.create({
+          message: msg,
+          duration: 4000,
+          position: position,
+          dismissOnPageChange: true
+      });
+      toast.present();
+  }
+
+  public showToastWithButton(msg: string, position: string, showCloseButton: boolean, closeButtonText: string) {
       let toast = this.toastCtrl.create({
           message: msg,
           duration: 4000,
@@ -31,6 +39,14 @@ export class Util {
           dismissOnPageChange: true
       });
       toast.present();
+  }
+
+  public removeNull(str: any) {
+      if (str == "null" || str == null || str == undefined) {
+          return "";
+      } else {
+          return str;
+      }
   }
 
 }
