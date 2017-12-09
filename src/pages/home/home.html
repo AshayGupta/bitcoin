@@ -1,8 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <!-- <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+    <ion-title>Header</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
 </ion-header>
+
+
 
 <ion-content padding>
 
@@ -18,16 +33,24 @@
           <ion-label floating>Amount</ion-label>
           <ion-input type="number" [(ngModel)]="transaction.amount"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item class="ion-item-border">
           <ion-label floating>Quantity</ion-label>
           <ion-input type="number" [(ngModel)]="transaction.quantity"></ion-input>
         </ion-item>
       </ion-list>
 
-      <button ion-button color="danger" outline (click)="buyClicked()">Buy</button>
-      <button ion-button color="secondary" outline (click)="sellClicked()">Sell</button>
+      <ion-item no-lines>
+        <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>
+        <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>
+      </ion-item>
 
     </ion-card-content>
   </ion-card>
+
+  <ion-item no-lines class="ion-item-center">
+    <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>
+  </ion-item>
+
+
 
 </ion-content>

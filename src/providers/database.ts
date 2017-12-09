@@ -19,11 +19,12 @@ export class Database{
   }
 
   public createTable(){
-    this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction(id INTEGER PRIMARY KEY AUTOINCREMENT, rate REAL, amount REAL, quantity REAL, action TEXT)', {})
+    this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction(id INTEGER PRIMARY KEY AUTOINCREMENT, rate REAL, amount REAL, quantity REAL, action TEXT, date NUMERIC)', {})
+    this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit(id INTEGER PRIMARY KEY AUTOINCREMENT, amount REAL, date NUMERIC)', {})
   }
 
   public insertTransactionData(){
-    
+
   }
 
 }

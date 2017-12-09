@@ -14,18 +14,24 @@ export class HomePage {
 
   private transaction: TransactionData;
   private toastMsg: string = 'All fields are mandatory to fill.'
+  private buy: string = 'buy'
+  private sell: string = 'sell'
 
-  constructor(public navCtrl: NavController, public util: Util) {
+  constructor(public navCtrl: NavController, public util: Util, public database: Database) {
     this.transaction = new TransactionData()
   }
 
+  private depositClicked(){
+    
+  }
+
   private buyClicked(){
-    this.transaction.action = 'buy'
+    this.transaction.action = this.buy
     this.validate()
   }
 
   private sellClicked(){
-    this.transaction.action = 'sell'
+    this.transaction.action = this.sell
     this.validate()
   }
 
@@ -40,8 +46,12 @@ export class HomePage {
       this.util.showToast(this.toastMsg, String.TOASTBOTTOM, true, String.OK)
     }
     else{
-
+      this.saveData()
     }
+  }
+
+  private saveData(){
+
   }
 
 }

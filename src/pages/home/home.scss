@@ -1,3 +1,27 @@
 page-home {
 
+  .ion-item-center{
+    text-align: center;
+  }
+
+  .button-deposit{
+    height: 40px !important;
+    width: 100px;
+    letter-spacing: 1px;
+  }
+
+  .ion-item-border{
+    border-bottom: none !important;
+  }
+
+  .button-buy, .button-sell{
+    height: 35px !important;
+    width: 60px;
+    border-radius: 5px !important;
+  }
+
+  ion-card{
+    text-align-last: justify;
+    border-radius: 5px !important;
+  }
 }
