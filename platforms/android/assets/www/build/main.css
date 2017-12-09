@@ -27981,6 +27981,7 @@ page-home .button-deposit {
   width: 100px;
   letter-spacing: 1px;
   border-radius: 5px !important;
+  font-size: 1.5rem !important;
 }
 
 page-home .ion-item-border {
@@ -27991,6 +27992,7 @@ page-home .button-buy, page-home .button-sell {
   height: 35px !important;
   width: 60px;
   border-radius: 5px !important;
+  font-size: 1.5rem !important;
 }
 
 page-home ion-card {

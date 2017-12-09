@@ -52,10 +52,10 @@ export class HomePage {
 
   private saveData(){
     this.database.insertTransactionData(this.transaction).then((data) => {
-      this.util.showToast("Data Saved", ToastConstant.TOAST_BOTTOM, )
+      this.util.basicAlert(StringConstant.DATA_SAVED, "")
     },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_BOTTOM, )
-    })
+      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_BOTTOM,)
+    });
   }
 
 }

@@ -1,5 +1,6 @@
 export enum StringConstant{
-  OK = 'OK'
+  OK = 'OK',
+  DATA_SAVED = 'Data saved'
 }
 
 export enum ErrorMsg{

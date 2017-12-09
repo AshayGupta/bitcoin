@@ -1,12 +1,28 @@
 import { Injectable } from "@angular/core";
 
 import { ToastController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 @Injectable()
 export class Util {
 
-  constructor(private toastCtrl: ToastController){
+  constructor(private toastCtrl: ToastController, private alertCtrl: AlertController){}
 
+  public basicAlert(title: string, msg: string){
+    let alert = this.alertCtrl.create({
+        title: title,
+        message: msg,
+        enableBackdropDismiss: false,
+        buttons: [
+          {
+            text: 'OK',
+            handler: () => {
+              console.log('Buy clicked');
+            }
+          }
+        ]
+      });
+      alert.present();
   }
 
   public isBlank(str: any) {

@@ -21,7 +21,9 @@ export class TransactionPage {
   }
 
   private getData(){
-
+    this.database.fetchTransactionData().then((data: TransactionData[]) => {
+      this.transaction = data
+    });
   }
 
 }
