@@ -28010,7 +28010,7 @@ page-home ion-input {
   font-size: 20px !important;
 }
 
-page-transaction .td-center {
+page-transaction .td-transaction-data {
   text-align: center;
 }
 
@@ -28022,4 +28022,22 @@ page-transaction .span-action-buy {
 page-transaction .span-action-sell {
   color: #32db64;
   text-transform: uppercase;
+}
+
+page-transaction .tr-no-data, page-transaction .ion-title-profit {
+  text-align: center;
+}
+
+page-transaction .pos-profit {
+  color: #32db64;
+  padding-left: 5px;
+}
+
+page-transaction .neg-profit {
+  color: #f53d3d;
+  padding-left: 5px;
+}
+
+page-transaction .profit-title, page-transaction .pos-profit, page-transaction .neg-profit {
+  font-size: 25px;
 }

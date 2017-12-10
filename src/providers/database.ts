@@ -22,7 +22,7 @@ export class Database{
   }
 
   public createTable(){
-    this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, quantity TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating transaction_tbl", e));
+    this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, coins TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating transaction_tbl", e));
     this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, date TEXT)', {}).catch(e => console.log("Error in creating deposit_tbl", e));
 
     console.log("Tables are created");
@@ -33,12 +33,12 @@ export class Database{
       let transactionData = [
         this.util.removeNull(transaction.rate),
         this.util.removeNull(transaction.amount),
-        this.util.removeNull(transaction.quantity),
+        this.util.removeNull(transaction.coins),
         this.util.removeNull(transaction.action),
         this.util.removeNull(transaction.date)
       ]
 
-      let query = "INSERT INTO transaction_tbl (rate, amount, quantity, action, date) VALUES (?,?,?,?,?)";
+      let query = "INSERT INTO transaction_tbl (rate, amount, coins, action, date) VALUES (?,?,?,?,?)";
       this.db.executeSql(query, transactionData).then((data) => {
         resolve(data)
       },(error) => {

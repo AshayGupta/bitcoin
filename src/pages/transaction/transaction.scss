@@ -1,6 +1,6 @@
 page-transaction {
 
-  .td-center{
+  .td-transaction-data{
     text-align: center;
   }
 
@@ -12,6 +12,24 @@ page-transaction {
   .span-action-sell{
     color: color($colors, secondary);
     text-transform: uppercase;
+  }
+
+  .tr-no-data, .ion-title-profit{
+    text-align: center;
+  }
+
+  .pos-profit{
+    color: color($colors, secondary);
+    padding-left: 5px;
+  }
+
+  .neg-profit{
+    color: color($colors, danger);
+    padding-left: 5px;
+  }
+
+  .profit-title, .pos-profit, .neg-profit{
+    font-size: 25px;
   }
 
 }

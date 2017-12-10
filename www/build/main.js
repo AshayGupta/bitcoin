@@ -63,7 +63,7 @@ var TabsPage = (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__summary_summary__["a" /* SummaryPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/tabs/tabs.html"*/`<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Transaction" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Summary" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/tabs/tabs.html"*/`<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Transactions" tabIcon="repeat"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Summary" tabIcon="book"></ion-tab>\n</ion-tabs>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -103,6 +103,7 @@ var TransactionPage = (function () {
         this.navCtrl = navCtrl;
         this.util = util;
         this.database = database;
+        this.profit = 0;
     }
     TransactionPage.prototype.ionViewWillEnter = function () {
         this.getData();
@@ -111,13 +112,30 @@ var TransactionPage = (function () {
         var _this = this;
         this.database.fetchTransactionData().then(function (data) {
             _this.transactionData = data;
+            _this.calculateProfit();
         }, function (error) {
             _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
         });
     };
+    TransactionPage.prototype.calculateProfit = function () {
+        var buySum = 0;
+        var sellSum = 0;
+        for (var i = 0; i < this.transactionData.length; i++) {
+            if (this.transactionData[i].action == 'buy') {
+                buySum += parseFloat(this.transactionData[i].amount);
+                console.log(buySum);
+            }
+            else {
+                sellSum += parseFloat(this.transactionData[i].amount);
+                console.log(sellSum);
+            }
+        }
+        this.profit = sellSum - buySum;
+        console.log("profit = ", this.profit);
+    };
     TransactionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-transaction',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Transactions</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div class="table-responsive">\n        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">\n            <tr>\n                <th class="th">No.</th>\n                <th class="th">Rate</th>\n                <th class="th">Amount</th>\n                <th class="th">Coins</th>\n                <th class="th">Action</th>\n            </tr>\n            <tr *ngIf="transactionData == undefined || transactionData.length == 0">\n              <td colspan="4" class="td">Data not available</td>\n            </tr>\n            <tr *ngFor="let tran of transactionData">\n                <td class="td-center">{{tran.id}}.</td>\n                <td class="td-center">{{tran.rate}}</td>\n                <td class="td-center">{{tran.amount}}</td>\n                <td class="td-center">{{tran.quantity}}</td>\n                <td class="td-center" *ngIf="tran.action == \'buy\'"><span class="span-action-buy">{{tran.action}}</span></td>\n                <td class="td-center" *ngIf="tran.action == \'sell\'"><span class="span-action-sell">{{tran.action}}</span></td>\n            </tr>\n\n        </table>\n    </div>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/
+            selector: 'page-transaction',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Transactions</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div class="table-responsive">\n        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">\n            <tr style="font-size: 17px;">\n                <th class="th">No.</th>\n                <th class="th">Rate</th>\n                <th class="th">Amount</th>\n                <th class="th">Coins</th>\n                <th class="th">Action</th>\n            </tr>\n            <tr *ngIf="transactionData == undefined || transactionData.length == 0" class="tr-no-data">\n              <td colspan="5" class="td">Data not available</td>\n            </tr>\n            <tr *ngFor="let tran of transactionData">\n                <td class="td-transaction-data">{{tran.id}}.</td>\n                <td class="td-transaction-data">{{tran.rate}}</td>\n                <td class="td-transaction-data">{{tran.amount}}</td>\n                <td class="td-transaction-data">{{tran.coins}}</td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'buy\'"><span class="span-action-buy">{{tran.action}}</span></td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'sell\'"><span class="span-action-sell">{{tran.action}}</span></td>\n            </tr>\n        </table>\n    </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title *ngIf="profit > 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="pos-profit">{{profit}}</span></ion-title>\n    <ion-title *ngIf="profit <= 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="neg-profit">{{profit}}</span></ion-title>\n  </ion-toolbar>\n</ion-footer>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
     ], TransactionPage);
@@ -245,7 +263,7 @@ var HomePage = (function () {
         else if (this.util.isBlank(this.transaction.amount)) {
             this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["b" /* StringConstant */].OK);
         }
-        else if (this.util.isBlank(this.transaction.quantity)) {
+        else if (this.util.isBlank(this.transaction.coins)) {
             this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["b" /* StringConstant */].OK);
         }
         else {
@@ -262,7 +280,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Header</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-content>\n\n      <ion-list>\n        <ion-item>\n          <ion-label floating>Rate</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.rate"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label floating>Amount</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.amount"></ion-input>\n        </ion-item>\n        <ion-item class="ion-item-border">\n          <ion-label floating>Coins</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.quantity"></ion-input>\n        </ion-item>\n      </ion-list>\n\n      <ion-item no-lines>\n        <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>\n        <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>\n      </ion-item>\n\n    </ion-card-content>\n  </ion-card>\n\n  <ion-item no-lines class="ion-item-center">\n    <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>\n  </ion-item>\n\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Header</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-content>\n\n      <ion-list>\n        <ion-item>\n          <!-- <ion-label floating>Rate</ion-label> -->\n          <ion-input type="number" [(ngModel)]="transaction.rate" placeholder="Rate"></ion-input>\n        </ion-item>\n        <ion-item>\n          <!-- <ion-label floating>Amount</ion-label> -->\n          <ion-input type="number" [(ngModel)]="transaction.amount" placeholder="Amount"></ion-input>\n        </ion-item>\n        <ion-item class="ion-item-border">\n          <!-- <ion-label floating>Coins</ion-label> -->\n          <ion-input type="number" [(ngModel)]="transaction.coins" placeholder="Coins"></ion-input>\n        </ion-item>\n      </ion-list>\n\n      <ion-item no-lines>\n        <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>\n        <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>\n      </ion-item>\n\n    </ion-card-content>\n  </ion-card>\n\n  <ion-item no-lines class="ion-item-center">\n    <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>\n  </ion-item>\n\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_5__providers_database__["a" /* Database */]])
     ], HomePage);
@@ -558,7 +576,7 @@ var Database = (function () {
         });
     };
     Database.prototype.createTable = function () {
-        this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, quantity TEXT, action TEXT, date TEXT)', {}).catch(function (e) { return console.log("Error in creating transaction_tbl", e); });
+        this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, coins TEXT, action TEXT, date TEXT)', {}).catch(function (e) { return console.log("Error in creating transaction_tbl", e); });
         this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, date TEXT)', {}).catch(function (e) { return console.log("Error in creating deposit_tbl", e); });
         console.log("Tables are created");
     };
@@ -568,11 +586,11 @@ var Database = (function () {
             var transactionData = [
                 _this.util.removeNull(transaction.rate),
                 _this.util.removeNull(transaction.amount),
-                _this.util.removeNull(transaction.quantity),
+                _this.util.removeNull(transaction.coins),
                 _this.util.removeNull(transaction.action),
                 _this.util.removeNull(transaction.date)
             ];
-            var query = "INSERT INTO transaction_tbl (rate, amount, quantity, action, date) VALUES (?,?,?,?,?)";
+            var query = "INSERT INTO transaction_tbl (rate, amount, coins, action, date) VALUES (?,?,?,?,?)";
             _this.db.executeSql(query, transactionData).then(function (data) {
                 resolve(data);
             }, function (error) {

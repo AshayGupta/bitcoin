@@ -22,7 +22,7 @@ export class HomePage {
   }
 
   ionViewDidEnter(){
-    
+
   }
 
   private depositClicked(){
@@ -46,7 +46,7 @@ export class HomePage {
     else if(this.util.isBlank(this.transaction.amount)){
       this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
     }
-    else if(this.util.isBlank(this.transaction.quantity)){
+    else if(this.util.isBlank(this.transaction.coins)){
       this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
     }
     else{
