@@ -28010,6 +28010,33 @@ page-home ion-input {
   font-size: 20px !important;
 }
 
+page-summary ion-card {
+  border-radius: 5px !important;
+  border-width: 1px;
+  border-color: darkgoldenrod;
+  border-style: solid;
+}
+
+page-summary .card-content {
+  text-align: center;
+}
+
+page-summary .invested-text {
+  float: left;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+page-summary .forward-icon {
+  font-size: 2.2em !important;
+}
+
+page-summary .invested-amount {
+  float: right;
+  font-size: 20px;
+}
+
 page-transaction .td-transaction-data {
   text-align: center;
 }

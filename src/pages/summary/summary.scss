@@ -1,3 +1,31 @@
 page-summary {
 
+  ion-card{
+    border-radius: 5px !important;
+    border-width: 1px;
+    border-color: darkgoldenrod;
+    border-style: solid
+  }
+
+  .card-content{
+    text-align: center;
+  }
+
+  .invested-text{
+    float: left;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .forward-icon{
+    font-size: 2.2em !important
+  }
+
+  .invested-amount{
+    float: right;
+    font-size: 20px;
+  }
+
+
 }

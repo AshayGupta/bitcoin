@@ -5,11 +5,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+  <ion-card>
+    <ion-card-content class="card-content">
+      <span class="invested-text">Deposit</span>
+      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
+      <span class="invested-amount">Rs. 3000</span>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content class="card-content">
+      <span class="invested-text">Total Coins</span>
+      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
+      <span class="invested-amount">{{totalCoins}}</span>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content class="card-content">
+      <span class="invested-text">Profit</span>
+      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
+      <span class="invested-amount">Rs. {{profit}}</span>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

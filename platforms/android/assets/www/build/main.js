@@ -1,6 +1,33 @@
 webpackJsonp([0],{
 
-/***/ 112:
+/***/ 102:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return StringConstant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ErrorMsg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ToastConstant; });
+var StringConstant;
+(function (StringConstant) {
+    StringConstant["OK"] = "OK";
+    StringConstant["DATA_SAVED"] = "Data saved";
+})(StringConstant || (StringConstant = {}));
+var ErrorMsg;
+(function (ErrorMsg) {
+    ErrorMsg["ERROR_SAVING_DATA"] = "Error in saving data";
+    ErrorMsg["ERROR_GET_DATA"] = "Error in getting data";
+})(ErrorMsg || (ErrorMsg = {}));
+var ToastConstant;
+(function (ToastConstant) {
+    ToastConstant["TOAST_TOP"] = "top";
+    ToastConstant["TOAST_MIDDLE"] = "middle";
+    ToastConstant["TOAST_BOTTOM"] = "bottom";
+})(ToastConstant || (ToastConstant = {}));
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ 113:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +40,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 112;
+webpackEmptyAsyncContext.id = 113;
 
 /***/ }),
 
-/***/ 154:
+/***/ 155:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,17 +57,17 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 154;
+webpackEmptyAsyncContext.id = 155;
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transaction_transaction__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transaction_transaction__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__summary_summary__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(202);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -74,16 +101,16 @@ var TabsPage = (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransactionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_util__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_constants__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_util__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_constants__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -135,7 +162,7 @@ var TransactionPage = (function () {
     };
     TransactionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-transaction',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Transactions</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div class="table-responsive">\n        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">\n            <tr style="font-size: 17px;">\n                <th class="th">No.</th>\n                <th class="th">Rate</th>\n                <th class="th">Amount</th>\n                <th class="th">Coins</th>\n                <th class="th">Action</th>\n            </tr>\n            <tr *ngIf="transactionData == undefined || transactionData.length == 0" class="tr-no-data">\n              <td colspan="5" class="td">Data not available</td>\n            </tr>\n            <tr *ngFor="let tran of transactionData">\n                <td class="td-transaction-data">{{tran.id}}.</td>\n                <td class="td-transaction-data">{{tran.rate}}</td>\n                <td class="td-transaction-data">{{tran.amount}}</td>\n                <td class="td-transaction-data">{{tran.coins}}</td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'buy\'"><span class="span-action-buy">{{tran.action}}</span></td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'sell\'"><span class="span-action-sell">{{tran.action}}</span></td>\n            </tr>\n        </table>\n    </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title *ngIf="profit > 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="pos-profit">{{profit}}</span></ion-title>\n    <ion-title *ngIf="profit <= 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="neg-profit">{{profit}}</span></ion-title>\n  </ion-toolbar>\n</ion-footer>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/
+            selector: 'page-transaction',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Transactions</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div class="table-responsive">\n        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">\n            <tr style="font-size: 16px;">\n                <th class="th">No.</th>\n                <th class="th">Rate</th>\n                <th class="th">Amount</th>\n                <th class="th">Coins</th>\n                <th class="th">Action</th>\n            </tr>\n            <tr *ngIf="transactionData == undefined || transactionData.length == 0" class="tr-no-data">\n              <td colspan="5" class="td">Data not available</td>\n            </tr>\n            <tr *ngFor="let tran of transactionData">\n                <td class="td-transaction-data">{{tran.id}}.</td>\n                <td class="td-transaction-data">{{tran.rate}}</td>\n                <td class="td-transaction-data">{{tran.amount}}</td>\n                <td class="td-transaction-data">{{tran.coins}}</td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'buy\'"><span class="span-action-buy">{{tran.action}}</span></td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'sell\'"><span class="span-action-sell">{{tran.action}}</span></td>\n            </tr>\n        </table>\n    </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title *ngIf="profit > 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="pos-profit">{{profit}}</span></ion-title>\n    <ion-title *ngIf="profit <= 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="neg-profit">{{profit}}</span></ion-title>\n  </ion-toolbar>\n</ion-footer>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
     ], TransactionPage);
@@ -146,33 +173,6 @@ var TransactionPage = (function () {
 
 /***/ }),
 
-/***/ 199:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return StringConstant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ErrorMsg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ToastConstant; });
-var StringConstant;
-(function (StringConstant) {
-    StringConstant["OK"] = "OK";
-    StringConstant["DATA_SAVED"] = "Data saved";
-})(StringConstant || (StringConstant = {}));
-var ErrorMsg;
-(function (ErrorMsg) {
-    ErrorMsg["ERROR_SAVING_DATA"] = "Error in saving data";
-    ErrorMsg["ERROR_GET_DATA"] = "Error in getting data";
-})(ErrorMsg || (ErrorMsg = {}));
-var ToastConstant;
-(function (ToastConstant) {
-    ToastConstant["TOAST_TOP"] = "top";
-    ToastConstant["TOAST_MIDDLE"] = "middle";
-    ToastConstant["TOAST_BOTTOM"] = "bottom";
-})(ToastConstant || (ToastConstant = {}));
-//# sourceMappingURL=constants.js.map
-
-/***/ }),
-
 /***/ 201:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -180,6 +180,9 @@ var ToastConstant;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SummaryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_util__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_constants__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -191,15 +194,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var SummaryPage = (function () {
-    function SummaryPage(navCtrl) {
+    function SummaryPage(navCtrl, util, database) {
         this.navCtrl = navCtrl;
+        this.util = util;
+        this.database = database;
+        this.profit = 0;
+        this.totalCoins = 0;
     }
+    SummaryPage.prototype.ionViewWillEnter = function () {
+        this.getTransactionData();
+        this.getDepositData();
+    };
+    SummaryPage.prototype.getTransactionData = function () {
+        var _this = this;
+        this.database.fetchTransactionData().then(function (data) {
+            _this.transactionData = data;
+            _this.calculateProfit();
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+        });
+    };
+    SummaryPage.prototype.getDepositData = function () {
+    };
+    SummaryPage.prototype.calculateProfit = function () {
+        var buySum = 0;
+        var sellSum = 0;
+        var buyCoin = 0;
+        var sellCoin = 0;
+        for (var i = 0; i < this.transactionData.length; i++) {
+            if (this.transactionData[i].action == 'buy') {
+                buySum += parseFloat(this.transactionData[i].amount);
+                buyCoin += parseFloat(this.transactionData[i].coins);
+                console.log(buySum, buyCoin);
+            }
+            else {
+                sellSum += parseFloat(this.transactionData[i].amount);
+                sellCoin += parseFloat(this.transactionData[i].coins);
+                console.log(sellSum, sellCoin);
+            }
+        }
+        this.profit = sellSum - buySum;
+        this.totalCoins = buyCoin - sellCoin;
+        console.log("profit = ", this.profit);
+    };
     SummaryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Summary</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
+            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. 3000</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Total Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{profit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
     ], SummaryPage);
     return SummaryPage;
 }());
@@ -216,9 +262,9 @@ var SummaryPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_transaction_data__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_util__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_constants__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_database__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_util__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_constants__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_database__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -267,6 +313,7 @@ var HomePage = (function () {
             this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["b" /* StringConstant */].OK);
         }
         else {
+            this.transaction.date = this.util.getTimeDate().toString();
             this.saveData();
         }
     };
@@ -280,7 +327,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Header</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-content>\n\n      <ion-list>\n        <ion-item>\n          <!-- <ion-label floating>Rate</ion-label> -->\n          <ion-input type="number" [(ngModel)]="transaction.rate" placeholder="Rate"></ion-input>\n        </ion-item>\n        <ion-item>\n          <!-- <ion-label floating>Amount</ion-label> -->\n          <ion-input type="number" [(ngModel)]="transaction.amount" placeholder="Amount"></ion-input>\n        </ion-item>\n        <ion-item class="ion-item-border">\n          <!-- <ion-label floating>Coins</ion-label> -->\n          <ion-input type="number" [(ngModel)]="transaction.coins" placeholder="Coins"></ion-input>\n        </ion-item>\n      </ion-list>\n\n      <ion-item no-lines>\n        <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>\n        <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>\n      </ion-item>\n\n    </ion-card-content>\n  </ion-card>\n\n  <ion-item no-lines class="ion-item-center">\n    <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>\n  </ion-item>\n\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Header</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-content>\n\n      <ion-list>\n        <ion-item>\n          <ion-label floating>Rate</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.rate"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label floating>Amount</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.amount"></ion-input>\n        </ion-item>\n        <ion-item class="ion-item-border">\n          <ion-label floating>Coins</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.coins"></ion-input>\n        </ion-item>\n      </ion-list>\n\n      <ion-item no-lines>\n        <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>\n        <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>\n      </ion-item>\n\n    </ion-card-content>\n  </ion-card>\n\n  <ion-item no-lines class="ion-item-center">\n    <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>\n  </ion-item>\n\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_5__providers_database__["a" /* Database */]])
     ], HomePage);
@@ -314,14 +361,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_transaction_transaction__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_transaction_transaction__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_summary_summary__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_util__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_database__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_util__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_database__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_sqlite__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -392,10 +439,10 @@ var AppModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_database__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_database__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -449,7 +496,7 @@ var TransactionData = (function () {
 
 /***/ }),
 
-/***/ 50:
+/***/ 40:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -527,6 +574,9 @@ var Util = (function () {
             return str;
         }
     };
+    Util.prototype.getTimeDate = function () {
+        return new Date().getTime();
+    };
     Util = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
@@ -538,7 +588,7 @@ var Util = (function () {
 
 /***/ }),
 
-/***/ 51:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -547,7 +597,7 @@ var Util = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_sqlite__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_util__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_util__ = __webpack_require__(40);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

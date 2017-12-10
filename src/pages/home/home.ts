@@ -50,6 +50,7 @@ export class HomePage {
       this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
     }
     else{
+      this.transaction.date = this.util.getTimeDate().toString()
       this.saveData()
     }
   }
@@ -57,7 +58,6 @@ export class HomePage {
   private saveData(){
     this.database.insertTransactionData(this.transaction).then((data) => {
       this.util.basicAlert(StringConstant.DATA_SAVED, "")
-
     },(error) => {
       this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_BOTTOM,)
     });

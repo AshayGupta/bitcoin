@@ -28,6 +28,7 @@ export class Database{
     console.log("Tables are created");
   }
 
+
   public insertTransactionData(transaction: TransactionData){
     return new Promise((resolve, reject) => {
       let transactionData = [
@@ -73,6 +74,26 @@ export class Database{
     },(error) => {
       console.log("DB error_selectAllFromTable ", error)
     })
+  }
+
+  public insertDepositData(transaction: TransactionData){
+    return new Promise((resolve, reject) => {
+      let transactionData = [
+        this.util.removeNull(transaction.rate),
+        this.util.removeNull(transaction.amount),
+        this.util.removeNull(transaction.coins),
+        this.util.removeNull(transaction.action),
+        this.util.removeNull(transaction.date)
+      ]
+
+      let query = "INSERT INTO transaction_tbl (rate, amount, coins, action, date) VALUES (?,?,?,?,?)";
+      this.db.executeSql(query, transactionData).then((data) => {
+        resolve(data)
+      },(error) => {
+        console.log("DB error_insertTransactionData ", error)
+        reject(error)
+      })
+    });
   }
 
 }

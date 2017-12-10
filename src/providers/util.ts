@@ -17,7 +17,7 @@ export class Util {
           {
             text: 'OK',
             handler: () => {
-              
+
             }
           }
         ]
@@ -63,6 +63,10 @@ export class Util {
       } else {
           return str;
       }
+  }
+
+  public getTimeDate(){
+      return new Date().getTime();
   }
 
 }
