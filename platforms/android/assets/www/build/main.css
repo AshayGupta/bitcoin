@@ -27972,6 +27972,21 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-home ion-card {
+  text-align-last: justify;
+  border-radius: 5px !important;
+}
+
+page-home ion-label {
+  padding-left: 0px !important;
+  color: #488aff !important;
+  font-size: 17px !important;
+}
+
+page-home ion-input {
+  font-size: 20px !important;
+}
+
 page-home .ion-item-center {
   text-align: center;
 }
@@ -27995,19 +28010,10 @@ page-home .button-buy, page-home .button-sell {
   font-size: 1.5rem !important;
 }
 
-page-home ion-card {
-  text-align-last: justify;
-  border-radius: 5px !important;
-}
-
-page-home ion-label {
-  padding-left: 0px !important;
-  color: #488aff !important;
-  font-size: 17px !important;
-}
-
-page-home ion-input {
-  font-size: 20px !important;
+page-home .deposit-amount {
+  border-width: 1px;
+  border-style: ridge;
+  border-radius: 5px;
 }
 
 page-summary ion-card {

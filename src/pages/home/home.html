@@ -23,7 +23,6 @@
 
   <ion-card>
     <ion-card-content>
-
       <ion-list>
         <ion-item>
           <ion-label floating>Rate</ion-label>
@@ -43,9 +42,12 @@
         <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>
         <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>
       </ion-item>
-
     </ion-card-content>
   </ion-card>
+
+  <!-- <ion-item no-lines class="ion-item-center" style="padding-left: 10px;"> -->
+    <ion-input type="number" [(ngModel)]="depositData.amount" placeholder="Amount" class="deposit-amount"></ion-input>
+  <!-- </ion-item> -->
 
   <ion-item no-lines class="ion-item-center">
     <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>

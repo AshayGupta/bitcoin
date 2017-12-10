@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { Util } from '../providers/util';
 
 import { TransactionData } from '../models/transaction-data';
+import { DepositData } from '../models/deposit-data';
 
 @Injectable()
 export class Database{
@@ -76,21 +77,34 @@ export class Database{
     })
   }
 
-  public insertDepositData(transaction: TransactionData){
+  public insertDepositData(deposit: DepositData){
     return new Promise((resolve, reject) => {
-      let transactionData = [
-        this.util.removeNull(transaction.rate),
-        this.util.removeNull(transaction.amount),
-        this.util.removeNull(transaction.coins),
-        this.util.removeNull(transaction.action),
-        this.util.removeNull(transaction.date)
+      let depositData = [
+        this.util.removeNull(deposit.amount),
+        this.util.removeNull(deposit.date)
       ]
 
-      let query = "INSERT INTO transaction_tbl (rate, amount, coins, action, date) VALUES (?,?,?,?,?)";
-      this.db.executeSql(query, transactionData).then((data) => {
+      let query = "INSERT INTO deposit_tbl (amount, date) VALUES (?,?)";
+      this.db.executeSql(query, depositData).then((data) => {
         resolve(data)
       },(error) => {
-        console.log("DB error_insertTransactionData ", error)
+        console.log("DB error_insertDepositData ", error)
+        reject(error)
+      })
+    });
+  }
+
+  public fetchDepositData(){
+    return new Promise((resolve, reject) => {
+      let query = "SELECT * FROM deposit_tbl";
+      this.db.executeSql(query, []).then((data) => {
+        let deposit_data: any = []
+        for(let i=0; i<data.rows.length; i++){
+          deposit_data.push(data.rows.item(i))
+        }
+        resolve(deposit_data)
+      },(error) => {
+        console.log("DB error_fetchDepositData ", error)
         reject(error)
       })
     });

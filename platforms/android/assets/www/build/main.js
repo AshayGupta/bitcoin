@@ -15,7 +15,8 @@ var StringConstant;
 var ErrorMsg;
 (function (ErrorMsg) {
     ErrorMsg["ERROR_SAVING_DATA"] = "Error in saving data";
-    ErrorMsg["ERROR_GET_DATA"] = "Error in getting data";
+    ErrorMsg["ERROR_GET_TRANSACTION_DATA"] = "Error in getting transaction data";
+    ErrorMsg["ERROR_GET_DEPOSIT_DATA"] = "Error in getting deposit data";
 })(ErrorMsg || (ErrorMsg = {}));
 var ToastConstant;
 (function (ToastConstant) {
@@ -141,7 +142,7 @@ var TransactionPage = (function () {
             _this.transactionData = data;
             _this.calculateProfit();
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
         });
     };
     TransactionPage.prototype.calculateProfit = function () {
@@ -204,6 +205,7 @@ var SummaryPage = (function () {
         this.database = database;
         this.profit = 0;
         this.totalCoins = 0;
+        this.deposit = 0;
     }
     SummaryPage.prototype.ionViewWillEnter = function () {
         this.getTransactionData();
@@ -215,35 +217,53 @@ var SummaryPage = (function () {
             _this.transactionData = data;
             _this.calculateProfit();
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
         });
     };
     SummaryPage.prototype.getDepositData = function () {
+        var _this = this;
+        this.database.fetchDepositData().then(function (data) {
+            _this.depositData = data;
+            _this.calculateDeposit();
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DEPOSIT_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+        });
     };
     SummaryPage.prototype.calculateProfit = function () {
-        var buySum = 0;
-        var sellSum = 0;
-        var buyCoin = 0;
-        var sellCoin = 0;
+        // let buySum: any = 0;
+        // let sellSum: any = 0;
+        // let buyCoin: any = 0;
+        // let sellCoin: any = 0;
         for (var i = 0; i < this.transactionData.length; i++) {
             if (this.transactionData[i].action == 'buy') {
-                buySum += parseFloat(this.transactionData[i].amount);
-                buyCoin += parseFloat(this.transactionData[i].coins);
-                console.log(buySum, buyCoin);
+                this.profit -= parseFloat(this.transactionData[i].amount);
+                this.totalCoins += parseFloat(this.transactionData[i].coins);
+                console.log("profit = ", this.profit);
+                console.log("coins = ", this.totalCoins);
+                // console.log(buySum,buyCoin)
             }
             else {
-                sellSum += parseFloat(this.transactionData[i].amount);
-                sellCoin += parseFloat(this.transactionData[i].coins);
-                console.log(sellSum, sellCoin);
+                this.profit += parseFloat(this.transactionData[i].amount);
+                this.totalCoins -= parseFloat(this.transactionData[i].coins);
+                console.log("profit = ", this.profit);
+                console.log("coins = ", this.totalCoins);
+                // console.log(sellSum,sellCoin)
             }
         }
-        this.profit = sellSum - buySum;
-        this.totalCoins = buyCoin - sellCoin;
-        console.log("profit = ", this.profit);
+        // this.profit = sellSum - buySum
+        // this.totalCoins = buyCoin - sellCoin
+    };
+    SummaryPage.prototype.calculateDeposit = function () {
+        // let sum: any = 0;
+        for (var i = 0; i < this.depositData.length; i++) {
+            this.deposit += parseFloat(this.depositData[i].amount);
+            console.log("deposit = ", this.deposit);
+        }
+        // this.deposit = sum
     };
     SummaryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. 3000</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Total Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{profit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
+            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{deposit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Total Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{profit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
     ], SummaryPage);
@@ -262,9 +282,10 @@ var SummaryPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_transaction_data__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_util__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_constants__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_database__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_deposit_data__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_util__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_constants__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_database__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -280,19 +301,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
     function HomePage(navCtrl, util, database) {
         this.navCtrl = navCtrl;
         this.util = util;
         this.database = database;
-        this.toastMsg = 'All fields are mandatory to fill.';
+        this.toastMsg = 'All fields are mandatory to fill';
+        this.depositMsg = 'Enter deposit amount';
         this.buy = 'buy';
         this.sell = 'sell';
         this.transaction = new __WEBPACK_IMPORTED_MODULE_2__models_transaction_data__["a" /* TransactionData */]();
+        this.depositData = new __WEBPACK_IMPORTED_MODULE_3__models_deposit_data__["a" /* DepositData */]();
     }
     HomePage.prototype.ionViewDidEnter = function () {
     };
     HomePage.prototype.depositClicked = function () {
+        if (this.util.isBlank(this.depositData.amount)) {
+            this.util.showToastWithButton(this.depositMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+        }
+        else {
+            this.depositData.date = this.util.getTimeDate().toString();
+            this.saveDepositData();
+        }
     };
     HomePage.prototype.buyClicked = function () {
         this.transaction.action = this.buy;
@@ -304,32 +335,41 @@ var HomePage = (function () {
     };
     HomePage.prototype.validate = function () {
         if (this.util.isBlank(this.transaction.rate)) {
-            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["b" /* StringConstant */].OK);
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
         }
         else if (this.util.isBlank(this.transaction.amount)) {
-            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["b" /* StringConstant */].OK);
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
         }
         else if (this.util.isBlank(this.transaction.coins)) {
-            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["b" /* StringConstant */].OK);
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
         }
         else {
             this.transaction.date = this.util.getTimeDate().toString();
-            this.saveData();
+            this.saveTransactionData();
         }
     };
-    HomePage.prototype.saveData = function () {
+    HomePage.prototype.saveTransactionData = function () {
         var _this = this;
         this.database.insertTransactionData(this.transaction).then(function (data) {
-            _this.util.basicAlert(__WEBPACK_IMPORTED_MODULE_4__providers_constants__["b" /* StringConstant */].DATA_SAVED, "");
+            _this.util.basicAlert(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].DATA_SAVED, "");
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_4__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_4__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+        });
+    };
+    HomePage.prototype.saveDepositData = function () {
+        var _this = this;
+        this.database.insertDepositData(this.depositData).then(function (data) {
+            _this.database.selectAllFromTable('deposit_tbl');
+            _this.util.basicAlert(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].DATA_SAVED, "");
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
         });
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Header</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-content>\n\n      <ion-list>\n        <ion-item>\n          <ion-label floating>Rate</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.rate"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label floating>Amount</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.amount"></ion-input>\n        </ion-item>\n        <ion-item class="ion-item-border">\n          <ion-label floating>Coins</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.coins"></ion-input>\n        </ion-item>\n      </ion-list>\n\n      <ion-item no-lines>\n        <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>\n        <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>\n      </ion-item>\n\n    </ion-card-content>\n  </ion-card>\n\n  <ion-item no-lines class="ion-item-center">\n    <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>\n  </ion-item>\n\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Header</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-content>\n      <ion-list>\n        <ion-item>\n          <ion-label floating>Rate</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.rate"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label floating>Amount</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.amount"></ion-input>\n        </ion-item>\n        <ion-item class="ion-item-border">\n          <ion-label floating>Coins</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.coins"></ion-input>\n        </ion-item>\n      </ion-list>\n\n      <ion-item no-lines>\n        <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>\n        <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>\n      </ion-item>\n    </ion-card-content>\n  </ion-card>\n\n  <!-- <ion-item no-lines class="ion-item-center" style="padding-left: 10px;"> -->\n    <ion-input type="number" [(ngModel)]="depositData.amount" placeholder="Amount" class="deposit-amount"></ion-input>\n  <!-- </ion-item> -->\n\n  <ion-item no-lines class="ion-item-center">\n    <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>\n  </ion-item>\n\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_5__providers_database__["a" /* Database */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_6__providers_database__["a" /* Database */]])
     ], HomePage);
     return HomePage;
 }());
@@ -493,6 +533,21 @@ var TransactionData = (function () {
 }());
 
 //# sourceMappingURL=transaction-data.js.map
+
+/***/ }),
+
+/***/ 280:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepositData; });
+var DepositData = (function () {
+    function DepositData() {
+    }
+    return DepositData;
+}());
+
+//# sourceMappingURL=deposit-data.js.map
 
 /***/ }),
 
@@ -673,6 +728,38 @@ var Database = (function () {
             }
         }, function (error) {
             console.log("DB error_selectAllFromTable ", error);
+        });
+    };
+    Database.prototype.insertDepositData = function (deposit) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var depositData = [
+                _this.util.removeNull(deposit.amount),
+                _this.util.removeNull(deposit.date)
+            ];
+            var query = "INSERT INTO deposit_tbl (amount, date) VALUES (?,?)";
+            _this.db.executeSql(query, depositData).then(function (data) {
+                resolve(data);
+            }, function (error) {
+                console.log("DB error_insertDepositData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database.prototype.fetchDepositData = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var query = "SELECT * FROM deposit_tbl";
+            _this.db.executeSql(query, []).then(function (data) {
+                var deposit_data = [];
+                for (var i = 0; i < data.rows.length; i++) {
+                    deposit_data.push(data.rows.item(i));
+                }
+                resolve(deposit_data);
+            }, function (error) {
+                console.log("DB error_fetchDepositData ", error);
+                reject(error);
+            });
         });
     };
     Database = __decorate([

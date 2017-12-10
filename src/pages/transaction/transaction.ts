@@ -29,7 +29,7 @@ export class TransactionPage {
       this.transactionData = data;
       this.calculateProfit()
     },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_GET_DATA, ToastConstant.TOAST_BOTTOM,)
+      this.util.showToast(ErrorMsg.ERROR_GET_TRANSACTION_DATA, ToastConstant.TOAST_BOTTOM,)
     });
   }
 
