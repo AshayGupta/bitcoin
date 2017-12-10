@@ -13,16 +13,21 @@ import { Database } from '../../providers/database';
 })
 export class TransactionPage {
 
-  private transaction: TransactionData[];
+  private transactionData: TransactionData[];
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database) {
 
+  }
+
+  ionViewWillEnter(){
     this.getData()
   }
 
   private getData(){
     this.database.fetchTransactionData().then((data: TransactionData[]) => {
-      this.transaction = data
+      this.transactionData = data
+    },(error) => {
+      this.util.showToast(ErrorMsg.ERROR_GET_DATA, ToastConstant.TOAST_BOTTOM,)
     });
   }
 

@@ -4,7 +4,8 @@ export enum StringConstant{
 }
 
 export enum ErrorMsg{
-  ERROR_SAVING_DATA = 'Error in saving data'
+  ERROR_SAVING_DATA = 'Error in saving data',
+  ERROR_GET_DATA = 'Error in getting data'
 }
 
 export enum ToastConstant{

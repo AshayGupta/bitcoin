@@ -1,5 +1,17 @@
 page-transaction {
 
-  
+  .td-center{
+    text-align: center;
+  }
+
+  .span-action-buy{
+    color: color($colors, danger);
+    text-transform: uppercase;
+  }
+
+  .span-action-sell{
+    color: color($colors, secondary);
+    text-transform: uppercase;
+  }
 
 }

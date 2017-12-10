@@ -21,6 +21,10 @@ export class HomePage {
     this.transaction = new TransactionData()
   }
 
+  ionViewDidEnter(){
+    
+  }
+
   private depositClicked(){
 
   }
@@ -53,6 +57,7 @@ export class HomePage {
   private saveData(){
     this.database.insertTransactionData(this.transaction).then((data) => {
       this.util.basicAlert(StringConstant.DATA_SAVED, "")
+
     },(error) => {
       this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_BOTTOM,)
     });

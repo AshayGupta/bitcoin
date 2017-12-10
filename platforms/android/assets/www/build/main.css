@@ -27999,3 +27999,27 @@ page-home ion-card {
   text-align-last: justify;
   border-radius: 5px !important;
 }
+
+page-home ion-label {
+  padding-left: 0px !important;
+  color: #488aff !important;
+  font-size: 17px !important;
+}
+
+page-home ion-input {
+  font-size: 20px !important;
+}
+
+page-transaction .td-center {
+  text-align: center;
+}
+
+page-transaction .span-action-buy {
+  color: #f53d3d;
+  text-transform: uppercase;
+}
+
+page-transaction .span-action-sell {
+  color: #32db64;
+  text-transform: uppercase;
+}

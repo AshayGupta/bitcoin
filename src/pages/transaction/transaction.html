@@ -1,10 +1,22 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Transactions
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <!-- <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+    <ion-title>Transactions</ion-title>
+
+    <!-- <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+  </ion-toolbar>
 </ion-header>
+
 
 <ion-content padding>
 
@@ -17,15 +29,16 @@
                 <th class="th">Coins</th>
                 <th class="th">Action</th>
             </tr>
-            <!-- <tr *ngIf="noUserData">
-              <td colspan="4" class="td">No data available</td>
-            </tr> -->
-            <tr *ngFor="let tran of transaction">
-                <td class="td">4545</td>
-                <td class="td">3443</td>
-                <td class="td">433</td>
-                <td class="td">434</td>
-                <td class="td">45</td>
+            <tr *ngIf="transactionData == undefined || transactionData.length == 0">
+              <td colspan="4" class="td">Data not available</td>
+            </tr>
+            <tr *ngFor="let tran of transactionData">
+                <td class="td-center">{{tran.id}}.</td>
+                <td class="td-center">{{tran.rate}}</td>
+                <td class="td-center">{{tran.amount}}</td>
+                <td class="td-center">{{tran.quantity}}</td>
+                <td class="td-center" *ngIf="tran.action == 'buy'"><span class="span-action-buy">{{tran.action}}</span></td>
+                <td class="td-center" *ngIf="tran.action == 'sell'"><span class="span-action-sell">{{tran.action}}</span></td>
             </tr>
 
         </table>

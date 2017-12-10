@@ -17,7 +17,7 @@ export class Util {
           {
             text: 'OK',
             handler: () => {
-              console.log('Buy clicked');
+              
             }
           }
         ]

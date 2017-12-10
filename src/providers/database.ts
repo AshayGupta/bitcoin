@@ -52,7 +52,11 @@ export class Database{
     return new Promise((resolve, reject) => {
       let query = "SELECT * FROM transaction_tbl";
       this.db.executeSql(query, []).then((data) => {
-        resolve(data)
+        let transaction_data: any = []
+        for(let i=0; i<data.rows.length; i++){
+          transaction_data.push(data.rows.item(i))
+        }
+        resolve(transaction_data)
       },(error) => {
         console.log("DB error_insertTransactionData ", error)
         reject(error)

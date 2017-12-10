@@ -27,4 +27,15 @@ page-home {
     text-align-last: justify;
     border-radius: 5px !important;
   }
+
+  ion-label{
+    padding-left: 0px !important;
+    color: color($colors, primary) !important;
+    font-size: 17px !important;
+  }
+
+  ion-input{
+    font-size: 20px !important;
+  }
+
 }
