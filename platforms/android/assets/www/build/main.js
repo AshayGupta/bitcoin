@@ -142,7 +142,7 @@ var TransactionPage = (function () {
             _this.transactionData = data;
             _this.calculateProfit();
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
         });
     };
     TransactionPage.prototype.calculateProfit = function () {
@@ -160,7 +160,7 @@ var TransactionPage = (function () {
     };
     TransactionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-transaction',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Transactions</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div class="table-responsive">\n        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">\n            <tr style="font-size: 16px;">\n                <th class="th">No.</th>\n                <th class="th">Rate</th>\n                <th class="th">Amount</th>\n                <th class="th">Coins</th>\n                <th class="th">Action</th>\n            </tr>\n            <tr *ngIf="transactionData == undefined || transactionData.length == 0" class="tr-no-data">\n              <td colspan="5" class="td">Data not available</td>\n            </tr>\n            <tr *ngFor="let tran of transactionData">\n                <td class="td-transaction-data">{{tran.id}}.</td>\n                <td class="td-transaction-data">{{tran.rate}}</td>\n                <td class="td-transaction-data">{{tran.amount}}</td>\n                <td class="td-transaction-data">{{tran.coins}}</td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'buy\'"><span class="span-action-buy">{{tran.action}}</span></td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'sell\'"><span class="span-action-sell">{{tran.action}}</span></td>\n            </tr>\n        </table>\n    </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title *ngIf="profit > 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="pos-profit">{{profit}}</span></ion-title>\n    <ion-title *ngIf="profit <= 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="neg-profit">{{profit}}</span></ion-title>\n  </ion-toolbar>\n</ion-footer>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/
+            selector: 'page-transaction',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Transactions</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div class="table-responsive">\n        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">\n            <tr style="font-size: 16px;">\n                <th class="th">No.</th>\n                <th class="th">Rate</th>\n                <th class="th">Amount</th>\n                <th class="th">Coins</th>\n                <th class="th">Action</th>\n            </tr>\n            <tr *ngIf="transactionData == undefined || transactionData.length == 0" class="tr-no-data">\n              <td colspan="5" class="td">Data not available</td>\n            </tr>\n            <tr *ngFor="let tran of transactionData">\n                <td class="td-transaction-data">{{tran.id}}.</td>\n                <td class="td-transaction-data">{{tran.rate}}</td>\n                <td class="td-transaction-data">{{tran.amount}}</td>\n                <td class="td-transaction-data">{{tran.coins}}</td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'buy\'"><span class="span-action-buy">{{tran.action}}</span></td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'sell\'"><span class="span-action-sell">{{tran.action}}</span></td>\n            </tr>\n        </table>\n    </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title *ngIf="profit > 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="pos-profit">{{profit}}</span></ion-title>\n    <ion-title *ngIf="profit <= 0" class="ion-title-profit"><span class="profit-title">PROFIT : </span><span class="neg-profit">{{profit}}</span></ion-title>\n  </ion-toolbar>\n</ion-footer>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/transaction/transaction.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
     ], TransactionPage);
@@ -214,7 +214,7 @@ var SummaryPage = (function () {
             _this.transactionData = data;
             _this.calculateProfit();
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
         });
     };
     SummaryPage.prototype.getDepositData = function () {
@@ -223,7 +223,7 @@ var SummaryPage = (function () {
             _this.depositData = data;
             _this.calculateDeposit();
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DEPOSIT_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DEPOSIT_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
         });
     };
     SummaryPage.prototype.calculateProfit = function () {
@@ -253,7 +253,7 @@ var SummaryPage = (function () {
     };
     SummaryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{deposit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Total Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{profit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
+            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{deposit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="invested-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="invested-amount">Rs. {{profit}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/Projects/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
     ], SummaryPage);
@@ -308,7 +308,7 @@ var HomePage = (function () {
     };
     HomePage.prototype.depositClicked = function () {
         if (this.util.isBlank(this.depositData.amount)) {
-            this.util.showToastWithButton(this.depositMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+            this.util.showToastWithButton(this.depositMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
         }
         else {
             this.depositData.date = this.util.getTimeDate().toString();
@@ -325,13 +325,13 @@ var HomePage = (function () {
     };
     HomePage.prototype.validate = function () {
         if (this.util.isBlank(this.transaction.rate)) {
-            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
         }
         else if (this.util.isBlank(this.transaction.amount)) {
-            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
         }
         else if (this.util.isBlank(this.transaction.coins)) {
-            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
         }
         else {
             this.transaction.date = this.util.getTimeDate().toString();
@@ -342,17 +342,23 @@ var HomePage = (function () {
         var _this = this;
         this.database.insertTransactionData(this.transaction).then(function (data) {
             _this.util.basicAlert(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].DATA_SAVED, "");
+            // this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
+            _this.transaction.rate = "";
+            _this.transaction.amount = "";
+            _this.transaction.coins = "";
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
         });
     };
     HomePage.prototype.saveDepositData = function () {
         var _this = this;
         this.database.insertDepositData(this.depositData).then(function (data) {
-            _this.database.selectAllFromTable('deposit_tbl');
+            // this.database.selectAllFromTable('deposit_tbl')
             _this.util.basicAlert(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].DATA_SAVED, "");
+            // this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
+            _this.depositData.amount = "";
         }, function (error) {
-            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
         });
     };
     HomePage = __decorate([
@@ -732,6 +738,18 @@ var Database = (function () {
                 resolve(data);
             }, function (error) {
                 console.log("DB error_insertDepositData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database.prototype.deleteTransactionData = function (id) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var query = "DELETE FROM transaction_tbl WHERE id = '" + id + "'";
+            _this.db.executeSql(query, []).then(function (data) {
+                resolve(data);
+            }, function (error) {
+                console.log("DB error_deleteTransactionData ", error);
                 reject(error);
             });
         });

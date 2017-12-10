@@ -17,7 +17,6 @@ export class TransactionPage {
   private profit: any = 0;
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database) {
-
   }
 
   ionViewWillEnter(){
@@ -29,7 +28,7 @@ export class TransactionPage {
       this.transactionData = data;
       this.calculateProfit()
     },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_GET_TRANSACTION_DATA, ToastConstant.TOAST_BOTTOM,)
+      this.util.showToast(ErrorMsg.ERROR_GET_TRANSACTION_DATA, ToastConstant.TOAST_TOP,)
     });
   }
 
@@ -45,6 +44,10 @@ export class TransactionPage {
         console.log("profit = ", this.profit)
       }
     }
+  }
+
+  private trashClicked(){
+    
   }
 
 }

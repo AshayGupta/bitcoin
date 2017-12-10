@@ -32,7 +32,7 @@ export class SummaryPage {
       this.transactionData = data;
       this.calculateProfit()
     },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_GET_TRANSACTION_DATA, ToastConstant.TOAST_BOTTOM,)
+      this.util.showToast(ErrorMsg.ERROR_GET_TRANSACTION_DATA, ToastConstant.TOAST_TOP,)
     });
   }
 
@@ -41,7 +41,7 @@ export class SummaryPage {
       this.depositData = data;
       this.calculateDeposit()
     },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_GET_DEPOSIT_DATA, ToastConstant.TOAST_BOTTOM,)
+      this.util.showToast(ErrorMsg.ERROR_GET_DEPOSIT_DATA, ToastConstant.TOAST_TOP,)
     });
   }
 

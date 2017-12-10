@@ -26,12 +26,11 @@ export class HomePage {
   }
 
   ionViewDidEnter(){
-
   }
 
   private depositClicked(){
     if(this.util.isBlank(this.depositData.amount)){
-      this.util.showToastWithButton(this.depositMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
+      this.util.showToastWithButton(this.depositMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
     }
     else{
       this.depositData.date = this.util.getTimeDate().toString();
@@ -51,13 +50,13 @@ export class HomePage {
 
   private validate(){
     if(this.util.isBlank(this.transaction.rate)){
-      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
+      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
     }
     else if(this.util.isBlank(this.transaction.amount)){
-      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
+      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
     }
     else if(this.util.isBlank(this.transaction.coins)){
-      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_BOTTOM, true, StringConstant.OK)
+      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
     }
     else{
       this.transaction.date = this.util.getTimeDate().toString()
@@ -68,17 +67,23 @@ export class HomePage {
   private saveTransactionData(){
     this.database.insertTransactionData(this.transaction).then((data) => {
       this.util.basicAlert(StringConstant.DATA_SAVED, "")
+      // this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
+      this.transaction.rate = ""
+      this.transaction.amount = ""
+      this.transaction.coins = ""
     },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_BOTTOM,)
+      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_TOP)
     });
   }
 
   private saveDepositData(){
     this.database.insertDepositData(this.depositData).then((data) => {
-      this.database.selectAllFromTable('deposit_tbl')
+      // this.database.selectAllFromTable('deposit_tbl')
       this.util.basicAlert(StringConstant.DATA_SAVED, "")
+      // this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
+      this.depositData.amount = ""
     },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_BOTTOM,)
+      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_TOP)
     });
   }
 

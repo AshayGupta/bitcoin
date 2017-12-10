@@ -94,6 +94,18 @@ export class Database{
     });
   }
 
+  public deleteTransactionData(id: any){
+    return new Promise((resolve, reject) => {
+      let query = "DELETE FROM transaction_tbl WHERE id = '"+id+"'";
+      this.db.executeSql(query, []).then((data) => {
+        resolve(data)
+      },(error) => {
+        console.log("DB error_deleteTransactionData ", error)
+        reject(error)
+      })
+    });
+  }
+
   public fetchDepositData(){
     return new Promise((resolve, reject) => {
       let query = "SELECT * FROM deposit_tbl";
