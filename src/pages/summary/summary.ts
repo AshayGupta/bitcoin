@@ -46,41 +46,30 @@ export class SummaryPage {
   }
 
   private calculateProfit(){
-    // let buySum: any = 0;
-    // let sellSum: any = 0;
-    // let buyCoin: any = 0;
-    // let sellCoin: any = 0;
-
+    this.profit = 0;
+    this.totalCoins = 0;
     for(let i=0; i<this.transactionData.length; i++){
       if(this.transactionData[i].action == 'buy'){
         this.profit -= parseFloat(this.transactionData[i].amount)
         this.totalCoins += parseFloat(this.transactionData[i].coins)
         console.log("profit = ", this.profit)
         console.log("coins = ", this.totalCoins)
-        // console.log(buySum,buyCoin)
       }
       else{
         this.profit += parseFloat(this.transactionData[i].amount)
         this.totalCoins -= parseFloat(this.transactionData[i].coins)
         console.log("profit = ", this.profit)
         console.log("coins = ", this.totalCoins)
-        // console.log(sellSum,sellCoin)
       }
     }
-    // this.profit = sellSum - buySum
-    // this.totalCoins = buyCoin - sellCoin
-
   }
 
   private calculateDeposit(){
-    // let sum: any = 0;
-
+    this.deposit = 0;
     for(let i=0; i<this.depositData.length; i++){
       this.deposit += parseFloat(this.depositData[i].amount);
       console.log("deposit = ", this.deposit)
     }
-    // this.deposit = sum
-
   }
 
 }

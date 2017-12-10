@@ -146,20 +146,17 @@ var TransactionPage = (function () {
         });
     };
     TransactionPage.prototype.calculateProfit = function () {
-        var buySum = 0;
-        var sellSum = 0;
+        this.profit = 0;
         for (var i = 0; i < this.transactionData.length; i++) {
             if (this.transactionData[i].action == 'buy') {
-                buySum += parseFloat(this.transactionData[i].amount);
-                console.log(buySum);
+                this.profit -= parseFloat(this.transactionData[i].amount);
+                console.log("profit = ", this.profit);
             }
             else {
-                sellSum += parseFloat(this.transactionData[i].amount);
-                console.log(sellSum);
+                this.profit += parseFloat(this.transactionData[i].amount);
+                console.log("profit = ", this.profit);
             }
         }
-        this.profit = sellSum - buySum;
-        console.log("profit = ", this.profit);
     };
     TransactionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -230,36 +227,29 @@ var SummaryPage = (function () {
         });
     };
     SummaryPage.prototype.calculateProfit = function () {
-        // let buySum: any = 0;
-        // let sellSum: any = 0;
-        // let buyCoin: any = 0;
-        // let sellCoin: any = 0;
+        this.profit = 0;
+        this.totalCoins = 0;
         for (var i = 0; i < this.transactionData.length; i++) {
             if (this.transactionData[i].action == 'buy') {
                 this.profit -= parseFloat(this.transactionData[i].amount);
                 this.totalCoins += parseFloat(this.transactionData[i].coins);
                 console.log("profit = ", this.profit);
                 console.log("coins = ", this.totalCoins);
-                // console.log(buySum,buyCoin)
             }
             else {
                 this.profit += parseFloat(this.transactionData[i].amount);
                 this.totalCoins -= parseFloat(this.transactionData[i].coins);
                 console.log("profit = ", this.profit);
                 console.log("coins = ", this.totalCoins);
-                // console.log(sellSum,sellCoin)
             }
         }
-        // this.profit = sellSum - buySum
-        // this.totalCoins = buyCoin - sellCoin
     };
     SummaryPage.prototype.calculateDeposit = function () {
-        // let sum: any = 0;
+        this.deposit = 0;
         for (var i = 0; i < this.depositData.length; i++) {
             this.deposit += parseFloat(this.depositData[i].amount);
             console.log("deposit = ", this.deposit);
         }
-        // this.deposit = sum
     };
     SummaryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({

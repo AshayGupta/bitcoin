@@ -28074,3 +28074,7 @@ page-transaction .neg-profit {
 page-transaction .profit-title, page-transaction .pos-profit, page-transaction .neg-profit {
   font-size: 25px;
 }
+
+page-transaction .th {
+  text-align: center;
+}

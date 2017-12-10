@@ -34,20 +34,17 @@ export class TransactionPage {
   }
 
   private calculateProfit(){
-    let buySum: any = 0;
-    let sellSum: any = 0;
+    this.profit = 0;
     for(let i=0; i<this.transactionData.length; i++){
       if(this.transactionData[i].action == 'buy'){
-        buySum += parseFloat(this.transactionData[i].amount)
-        console.log(buySum)
+        this.profit -= parseFloat(this.transactionData[i].amount)
+        console.log("profit = ", this.profit)
       }
       else{
-        sellSum += parseFloat(this.transactionData[i].amount)
-        console.log(sellSum)
+        this.profit += parseFloat(this.transactionData[i].amount)
+        console.log("profit = ", this.profit)
       }
     }
-    this.profit = sellSum - buySum
-    console.log("profit = ", this.profit)
   }
 
 }
