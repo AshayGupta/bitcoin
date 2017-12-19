@@ -15,9 +15,13 @@ export class SummaryPage {
 
   private transactionData: TransactionData[];
   private depositData: DepositData[];
-  private profit: any = 0;
+  private buy: string = 'buy'
+  private sell: string = 'sell'
+  private deposit: string = 'deposit'
+  private withdraw: string = 'withdraw'
+  private profitAmt: any = 0;
   private totalCoins: any = 0;
-  private deposit: any = 0;
+  private depositAmt: any = 0;
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database) {
   }
@@ -46,29 +50,38 @@ export class SummaryPage {
   }
 
   private calculateProfit(){
-    this.profit = 0;
+    this.profitAmt = 0;
     this.totalCoins = 0;
     for(let i=0; i<this.transactionData.length; i++){
-      if(this.transactionData[i].action == 'buy'){
-        this.profit -= parseFloat(this.transactionData[i].amount)
+      if(this.transactionData[i].action == this.buy){
+        this.profitAmt -= parseFloat(this.transactionData[i].amount)
         this.totalCoins += parseFloat(this.transactionData[i].coins)
-        console.log("profit = ", this.profit)
+        console.log("profit = ", this.profitAmt)
         console.log("coins = ", this.totalCoins)
       }
       else{
-        this.profit += parseFloat(this.transactionData[i].amount)
+        this.profitAmt += parseFloat(this.transactionData[i].amount)
         this.totalCoins -= parseFloat(this.transactionData[i].coins)
-        console.log("profit = ", this.profit)
+        console.log("profit = ", this.profitAmt)
         console.log("coins = ", this.totalCoins)
       }
     }
   }
 
   private calculateDeposit(){
-    this.deposit = 0;
+    this.depositAmt = 0;
     for(let i=0; i<this.depositData.length; i++){
-      this.deposit += parseFloat(this.depositData[i].amount);
-      console.log("deposit = ", this.deposit)
+      if(this.depositData[i].action == this.deposit){
+        this.depositAmt += parseFloat(this.depositData[i].amount);
+      }
+      else{
+        this.depositAmt -= parseFloat(this.depositData[i].amount);
+      }
+      if(this.depositAmt < 0){
+        this.depositAmt = 0;
+        this.database.deleteDepositData()
+      }
+      console.log("deposit = ", this.depositAmt)
     }
   }
 

@@ -24,11 +24,22 @@ export class Database{
 
   public createTable(){
     this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, coins TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating transaction_tbl", e));
-    this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, date TEXT)', {}).catch(e => console.log("Error in creating deposit_tbl", e));
+    this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating deposit_tbl", e));
 
     console.log("Tables are created");
   }
 
+
+  public selectAllFromTable(tblName: string){
+    let query = "SELECT * FROM " + tblName;
+    this.db.executeSql(query, []).then((data) => {
+      for(let i=0; i<data.rows.length; i++){
+        console.log("All data from " +tblName+ " --> ", data.rows.item(i))
+      }
+    },(error) => {
+      console.log("DB error_selectAllFromTable ", error)
+    })
+  }
 
   public insertTransactionData(transaction: TransactionData){
     return new Promise((resolve, reject) => {
@@ -66,41 +77,19 @@ export class Database{
     });
   }
 
-  public selectAllFromTable(tblName: string){
-    let query = "SELECT * FROM " + tblName;
-    this.db.executeSql(query, []).then((data) => {
-      for(let i=0; i<data.rows.length; i++){
-        console.log("All data from " +tblName+ " --> ", data.rows.item(i))
-      }
-    },(error) => {
-      console.log("DB error_selectAllFromTable ", error)
-    })
-  }
-
   public insertDepositData(deposit: DepositData){
     return new Promise((resolve, reject) => {
       let depositData = [
         this.util.removeNull(deposit.amount),
+        this.util.removeNull(deposit.action),
         this.util.removeNull(deposit.date)
       ]
 
-      let query = "INSERT INTO deposit_tbl (amount, date) VALUES (?,?)";
+      let query = "INSERT INTO deposit_tbl (amount, action, date) VALUES (?,?,?)";
       this.db.executeSql(query, depositData).then((data) => {
         resolve(data)
       },(error) => {
         console.log("DB error_insertDepositData ", error)
-        reject(error)
-      })
-    });
-  }
-
-  public deleteTransactionData(id: any){
-    return new Promise((resolve, reject) => {
-      let query = "DELETE FROM transaction_tbl WHERE id = '"+id+"'";
-      this.db.executeSql(query, []).then((data) => {
-        resolve(data)
-      },(error) => {
-        console.log("DB error_deleteTransactionData ", error)
         reject(error)
       })
     });
@@ -121,5 +110,32 @@ export class Database{
       })
     });
   }
+
+  public deleteTransactionData(id: any){
+    return new Promise((resolve, reject) => {
+      let query = "DELETE FROM transaction_tbl WHERE id = '"+id+"'";
+      this.db.executeSql(query, []).then((data) => {
+        resolve(data)
+      },(error) => {
+        console.log("DB error_deleteTransactionData ", error)
+        reject(error)
+      })
+    });
+  }
+
+  public deleteDepositData(){
+    return new Promise((resolve, reject) => {
+      let query = "DELETE FROM deposit_tbl";
+      this.db.executeSql(query, []).then((data) => {
+        resolve(data)
+      },(error) => {
+        console.log("DB error_deleteDepositData ", error)
+        reject(error)
+      })
+    });
+  }
+
+
+
 
 }

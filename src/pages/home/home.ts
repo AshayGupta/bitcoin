@@ -19,6 +19,8 @@ export class HomePage {
   private depositMsg: string = 'Enter deposit amount'
   private buy: string = 'buy'
   private sell: string = 'sell'
+  private deposit: string = 'deposit'
+  private withdraw: string = 'withdraw'
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database) {
     this.transaction = new TransactionData()
@@ -26,26 +28,6 @@ export class HomePage {
   }
 
   ionViewDidEnter(){
-  }
-
-  private depositClicked(){
-    if(this.util.isBlank(this.depositData.amount)){
-      this.util.showToastWithButton(this.depositMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
-    }
-    else{
-      this.depositData.date = this.util.getTimeDate().toString();
-      this.saveDepositData();
-    }
-  }
-
-  private buyClicked(){
-    this.transaction.action = this.buy
-    this.validate()
-  }
-
-  private sellClicked(){
-    this.transaction.action = this.sell
-    this.validate()
   }
 
   private validate(){
@@ -64,6 +46,51 @@ export class HomePage {
     }
   }
 
+  private buyClicked(){
+    this.transaction.action = this.buy
+    this.validate()
+  }
+
+  private sellClicked(){
+    this.transaction.action = this.sell
+    this.validate()
+  }
+
+  private depositClicked(){
+    if(this.util.isBlank(this.depositData.deposit_amount)){
+      this.util.showToastWithButton(this.depositMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
+    }
+    else{
+      this.depositData.date = this.util.getTimeDate().toString();
+      this.depositData.action = this.deposit;
+      this.depositData.amount = this.depositData.deposit_amount;
+      this.saveDepositData();
+    }
+  }
+
+  private withdrawClicked(){
+    if(this.util.isBlank(this.depositData.withdraw_amount)){
+      this.util.showToastWithButton(this.depositMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
+    }
+    else{
+      this.depositData.date = this.util.getTimeDate().toString();
+      this.depositData.action = this.withdraw;
+      this.depositData.amount = this.depositData.withdraw_amount;
+      this.saveDepositData();
+    }
+  }
+
+  private saveDepositData(){
+    this.database.insertDepositData(this.depositData).then((data) => {
+      // this.database.selectAllFromTable('deposit_tbl')
+      this.util.basicAlert(StringConstant.DATA_SAVED, "")
+      this.depositData.deposit_amount = "";
+      this.depositData.withdraw_amount = "";
+    },(error) => {
+      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_TOP)
+    });
+  }
+
   private saveTransactionData(){
     this.database.insertTransactionData(this.transaction).then((data) => {
       this.util.basicAlert(StringConstant.DATA_SAVED, "")
@@ -76,15 +103,6 @@ export class HomePage {
     });
   }
 
-  private saveDepositData(){
-    this.database.insertDepositData(this.depositData).then((data) => {
-      // this.database.selectAllFromTable('deposit_tbl')
-      this.util.basicAlert(StringConstant.DATA_SAVED, "")
-      // this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
-      this.depositData.amount = ""
-    },(error) => {
-      this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_TOP)
-    });
-  }
+
 
 }

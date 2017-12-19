@@ -45,13 +45,21 @@
     </ion-card-content>
   </ion-card>
 
-  <!-- <ion-item no-lines class="ion-item-center" style="padding-left: 10px;"> -->
-    <ion-input type="number" [(ngModel)]="depositData.amount" placeholder="Amount" class="deposit-amount"></ion-input>
-  <!-- </ion-item> -->
+  <!-- <ion-input type="number" [(ngModel)]="depositData.amount" placeholder="Amount" class="deposit-amount"></ion-input>
 
   <ion-item no-lines class="ion-item-center">
     <button ion-button color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>
-  </ion-item>
+  </ion-item> -->
+
+    <ion-item>
+        <ion-input type="number" [(ngModel)]="depositData.deposit_amount" placeholder="Amount" class=""></ion-input>
+        <button ion-button item-right color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>
+    </ion-item>
+    <ion-item>
+        <ion-input type="number" [(ngModel)]="depositData.withdraw_amount" placeholder="Amount" class=""></ion-input>
+        <button ion-button item-right color="primary" class="button-deposit" (click)="withdrawClicked()">Withdraw</button>
+    </ion-item>
+
 
 
 

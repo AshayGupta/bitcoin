@@ -27992,11 +27992,11 @@ page-home .ion-item-center {
 }
 
 page-home .button-deposit {
-  height: 40px !important;
-  width: 100px;
+  height: 35px !important;
+  width: 90px;
   letter-spacing: 1px;
   border-radius: 5px !important;
-  font-size: 1.5rem !important;
+  font-size: 1.3rem !important;
 }
 
 page-home .ion-item-border {
