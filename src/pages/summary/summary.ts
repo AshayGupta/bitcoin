@@ -24,7 +24,7 @@ export class SummaryPage {
   private totalCoins: any = 0;
   private depositAmt: any = 0;
   private investedAmt: any = 0;
-  private edit: boolean = false;
+  private edit: boolean = true;
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database) {
   }
