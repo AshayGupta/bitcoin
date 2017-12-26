@@ -20,8 +20,11 @@ export class SummaryPage {
   private deposit: string = 'deposit'
   private withdraw: string = 'withdraw'
   private profitAmt: any = 0;
+  private profitDisplay: any = 0;
   private totalCoins: any = 0;
   private depositAmt: any = 0;
+  private investedAmt: any = 0;
+  private edit: boolean = false;
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database) {
   }
@@ -66,6 +69,7 @@ export class SummaryPage {
         console.log("coins = ", this.totalCoins)
       }
     }
+    this.addInvestedAmt()
   }
 
   private calculateDeposit(){
@@ -84,5 +88,31 @@ export class SummaryPage {
       console.log("deposit = ", this.depositAmt)
     }
   }
+
+  private investedAmtEnter(event){
+    console.log(event.target.value)
+    window.localStorage.setItem("investedAmt", event.target.value);
+    this.addInvestedAmt()
+  }
+
+  private addInvestedAmt(){
+    this.investedAmt = window.localStorage.getItem("investedAmt");
+    if(!this.util.isBlank(this.investedAmt)){
+      this.profitDisplay = this.profitAmt + parseFloat(this.investedAmt);
+    }
+    else{
+      this.profitDisplay = this.profitAmt;
+    }
+  }
+
+  private editClicked(){
+    if(this.edit == false){
+      this.edit = true;
+    }
+    else{
+      this.edit = false;
+    }
+  }
+
 
 }

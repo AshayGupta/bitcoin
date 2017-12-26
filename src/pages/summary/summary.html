@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Summary</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="editClicked()">
+        <ion-icon ios="ios-create" md="md-create"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +22,7 @@
   <ion-card>
     <ion-card-content class="card-content">
       <ion-item style="padding-left: 0px; font-size: 20px">
-        <ion-input type="number" placeholder="Invested Amount"></ion-input>
+        <ion-input type="number" placeholder="Invested Amount" [(ngModel)]="investedAmt" (keyup)="investedAmtEnter($event)" [disabled]="edit"></ion-input>
       </ion-item>
     </ion-card-content>
   </ion-card>
@@ -34,7 +39,7 @@
     <ion-card-content class="card-content">
       <span class="left-text">Profit</span>
       <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
-      <span class="right-text">Rs. {{profitAmt}}</span>
+      <span class="right-text">Rs. {{profitDisplay}}</span>
     </ion-card-content>
   </ion-card>
 

@@ -235,8 +235,11 @@ var SummaryPage = (function () {
         this.deposit = 'deposit';
         this.withdraw = 'withdraw';
         this.profitAmt = 0;
+        this.profitDisplay = 0;
         this.totalCoins = 0;
         this.depositAmt = 0;
+        this.investedAmt = 0;
+        this.edit = false;
     }
     SummaryPage.prototype.ionViewWillEnter = function () {
         this.getTransactionData();
@@ -277,6 +280,7 @@ var SummaryPage = (function () {
                 console.log("coins = ", this.totalCoins);
             }
         }
+        this.addInvestedAmt();
     };
     SummaryPage.prototype.calculateDeposit = function () {
         this.depositAmt = 0;
@@ -294,9 +298,31 @@ var SummaryPage = (function () {
             console.log("deposit = ", this.depositAmt);
         }
     };
+    SummaryPage.prototype.investedAmtEnter = function (event) {
+        console.log(event.target.value);
+        window.localStorage.setItem("investedAmt", event.target.value);
+        this.addInvestedAmt();
+    };
+    SummaryPage.prototype.addInvestedAmt = function () {
+        this.investedAmt = window.localStorage.getItem("investedAmt");
+        if (!this.util.isBlank(this.investedAmt)) {
+            this.profitDisplay = this.profitAmt + parseFloat(this.investedAmt);
+        }
+        else {
+            this.profitDisplay = this.profitAmt;
+        }
+    };
+    SummaryPage.prototype.editClicked = function () {
+        if (this.edit == false) {
+            this.edit = true;
+        }
+        else {
+            this.edit = false;
+        }
+    };
     SummaryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">Rs. {{depositAmt}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <ion-item style="padding-left: 0px; font-size: 20px">\n        <ion-input type="number" placeholder="Invested Amount"></ion-input>\n      </ion-item>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">Rs. {{profitAmt}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
+            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="editClicked()">\n        <ion-icon ios="ios-create" md="md-create"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">Rs. {{depositAmt}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <ion-item style="padding-left: 0px; font-size: 20px">\n        <ion-input type="number" placeholder="Invested Amount" [(ngModel)]="investedAmt" (keyup)="investedAmtEnter($event)" [disabled]="edit"></ion-input>\n      </ion-item>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">Rs. {{profitDisplay}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin/src/pages/summary/summary.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
     ], SummaryPage);
