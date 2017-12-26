@@ -27972,6 +27972,11 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 page-home ion-card {
   text-align-last: justify;
   border-radius: 5px !important;
@@ -28027,7 +28032,7 @@ page-summary .card-content {
   text-align: center;
 }
 
-page-summary .invested-text {
+page-summary .left-text {
   float: left;
   font-family: monospace;
   font-size: 20px;
@@ -28038,7 +28043,7 @@ page-summary .forward-icon {
   font-size: 2.2em !important;
 }
 
-page-summary .invested-amount {
+page-summary .right-text {
   float: right;
   font-size: 20px;
 }

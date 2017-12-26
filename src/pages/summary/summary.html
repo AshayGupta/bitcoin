@@ -8,25 +8,33 @@
 
   <ion-card>
     <ion-card-content class="card-content">
-      <span class="invested-text">Deposit</span>
+      <span class="left-text">Deposit</span>
       <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
-      <span class="invested-amount">Rs. {{depositAmt}}</span>
+      <span class="right-text">Rs. {{depositAmt}}</span>
     </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-card-content class="card-content">
-      <span class="invested-text">Coins</span>
-      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
-      <span class="invested-amount">{{totalCoins}}</span>
+      <ion-item style="padding-left: 0px; font-size: 20px">
+        <ion-input type="number" placeholder="Invested Amount"></ion-input>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-card-content class="card-content">
-      <span class="invested-text">Profit</span>
+      <span class="left-text">Coins</span>
       <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
-      <span class="invested-amount">Rs. {{profitAmt}}</span>
+      <span class="right-text">{{totalCoins}}</span>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content class="card-content">
+      <span class="left-text">Profit</span>
+      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>
+      <span class="right-text">Rs. {{profitAmt}}</span>
     </ion-card-content>
   </ion-card>
 
