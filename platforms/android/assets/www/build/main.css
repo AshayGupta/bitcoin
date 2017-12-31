@@ -27977,6 +27977,51 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin: 0;
 }
 
+page-calculator ion-item {
+  padding-left: 0px !important;
+}
+
+page-calculator ion-label {
+  color: #488aff !important;
+  font-size: 20px !important;
+}
+
+page-calculator ion-input {
+  font-size: 17px !important;
+  text-align: center;
+}
+
+page-calculator input {
+  text-align: center;
+}
+
+page-calculator .button-calculate {
+  height: 35px !important;
+  width: 100px;
+  letter-spacing: 1px;
+  border-radius: 5px !important;
+  font-size: 1.3rem !important;
+}
+
+page-calculator .ion-item-center {
+  text-align: center;
+}
+
+page-calculator .ion-title-profit {
+  text-align: center;
+  padding: 0px;
+}
+
+page-calculator .pos-profit {
+  color: #32db64;
+  padding-left: 5px;
+  font-size: 25px;
+}
+
+page-calculator .profit-title {
+  font-size: 25px;
+}
+
 page-home ion-card {
   text-align-last: justify;
   border-radius: 5px !important;
@@ -27985,11 +28030,11 @@ page-home ion-card {
 page-home ion-label {
   padding-left: 0px !important;
   color: #488aff !important;
-  font-size: 17px !important;
+  font-size: 20px !important;
 }
 
 page-home ion-input {
-  font-size: 20px !important;
+  font-size: 17px !important;
 }
 
 page-home .ion-item-center {
@@ -28048,6 +28093,16 @@ page-summary .right-text {
   font-size: 20px;
 }
 
+page-summary .edit-invested {
+  margin: 0px !important;
+  height: 30px !important;
+  font-size: 1.7rem !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: grey;
+}
+
 page-transaction .td-transaction-data {
   text-align: center;
 }
@@ -28069,14 +28124,16 @@ page-transaction .tr-no-data, page-transaction .ion-title-profit {
 page-transaction .pos-profit {
   color: #32db64;
   padding-left: 5px;
+  font-size: 25px;
 }
 
 page-transaction .neg-profit {
   color: #f53d3d;
   padding-left: 5px;
+  font-size: 25px;
 }
 
-page-transaction .profit-title, page-transaction .pos-profit, page-transaction .neg-profit {
+page-transaction .profit-title {
   font-size: 25px;
 }
 

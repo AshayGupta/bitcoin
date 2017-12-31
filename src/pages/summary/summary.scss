@@ -19,12 +19,21 @@ page-summary {
   }
 
   .forward-icon{
-    font-size: 2.2em !important
+    font-size: 2.2em !important;
   }
 
   .right-text{
     float: right;
     font-size: 20px;
+  }
+
+  .edit-invested{
+    margin: 0px !important;
+    height: 30px !important;
+    font-size: 1.7rem !important;
+    box-shadow: none;
+    background-color: transparent;
+    color: grey;
   }
 
 

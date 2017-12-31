@@ -5,10 +5,10 @@ import { Util } from '../../providers/util';
 import { StringConstant, ToastConstant, ErrorMsg } from '../../providers/constants';
 
 @Component({
-  selector: 'page-calculate',
-  templateUrl: 'calculate.html',
+  selector: 'page-calculator',
+  templateUrl: 'calculator.html',
 })
-export class CalculatePage {
+export class CalculatorPage {
 
   private buyRate: any;
   private sellRate: any;
@@ -19,7 +19,7 @@ export class CalculatePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CalculatePage');
+    console.log('ionViewDidLoad CalculatorPage');
   }
 
   private calculateClicked(){

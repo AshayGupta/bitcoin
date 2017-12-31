@@ -7,7 +7,7 @@ import { TransactionPage } from '../pages/transaction/transaction';
 import { SummaryPage } from '../pages/summary/summary';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { CalculatePage } from '../pages/calculate/calculate';
+import { CalculatorPage } from '../pages/calculator/calculator';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +24,7 @@ import { ScrollableTabs } from '../components/scrollable-tabs/scrollable-tabs';
     SummaryPage,
     HomePage,
     TabsPage,
-    CalculatePage,
+    CalculatorPage,
     ScrollableTabs
   ],
   imports: [
@@ -38,7 +38,7 @@ import { ScrollableTabs } from '../components/scrollable-tabs/scrollable-tabs';
     SummaryPage,
     HomePage,
     TabsPage,
-    CalculatePage
+    CalculatorPage
   ],
   providers: [
     StatusBar,

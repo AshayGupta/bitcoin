@@ -23,22 +23,22 @@
 
   <ion-card>
     <ion-card-content>
-      <ion-list>
+      <!-- <ion-list> -->
         <ion-item>
-          <ion-label floating>Rate</ion-label>
+          <ion-label stacked>Rate</ion-label>
           <ion-input type="number" [(ngModel)]="transaction.rate"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label floating>Amount</ion-label>
+          <ion-label stacked>Amount</ion-label>
           <ion-input type="number" [(ngModel)]="transaction.amount"></ion-input>
         </ion-item>
         <ion-item class="ion-item-border">
-          <ion-label floating>Coins</ion-label>
+          <ion-label stacked>Coins</ion-label>
           <ion-input type="number" [(ngModel)]="transaction.coins"></ion-input>
         </ion-item>
-      </ion-list>
+      <!-- </ion-list> -->
 
-      <ion-item no-lines>
+      <ion-item >
         <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>
         <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>
       </ion-item>
