@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Calculate Profit</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="editClicked()">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ion-list> -->
+    <ion-item >
+      <ion-label stacked>Buy Rate</ion-label>
+      <ion-input type="number" placeholder="Enter Buy Rate" [(ngModel)]="buyRate"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label stacked>Sell Rate</ion-label>
+      <ion-input type="number" placeholder="Enter Sell Rate" [(ngModel)]="sellRate"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label stacked>Amount</ion-label>
+      <ion-input type="number" placeholder="Enter Amount" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+  <!-- </ion-list> -->
+
+  <ion-item no-lines class="ion-item-center">
+    <button ion-button color="primary" class="button-calculate" (click)="calculateClicked()">Calculate</button>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="ion-title-profit"><span class="profit-title">Profit : </span><span class="pos-profit">{{profit}}</span></ion-title>
+  </ion-toolbar>
+</ion-footer>

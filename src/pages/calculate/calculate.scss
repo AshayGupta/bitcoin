@@ -1,0 +1,48 @@
+page-calculate {
+
+  ion-item{
+    padding-left: 0px !important;
+  }
+
+  ion-label{
+    color: color($colors, primary) !important;
+    font-size: 20px !important;
+  }
+
+  ion-input{
+    font-size: 17px !important;
+    text-align: center;
+  }
+
+  input{
+    text-align: center;
+  }
+
+  .button-calculate{
+    height: 35px !important;
+    width: 100px;
+    letter-spacing: 1px;
+    border-radius: 5px !important;
+    font-size: 1.3rem !important;
+  }
+
+  .ion-item-center{
+    text-align: center;
+  }
+
+  .ion-title-profit{
+    text-align: center;
+    padding: 0px
+  }
+
+  .pos-profit{
+    color: color($colors, secondary);
+    padding-left: 5px;
+    font-size: 25px;
+  }
+
+  .profit-title{
+    font-size: 25px;
+  }
+
+}

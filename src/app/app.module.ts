@@ -7,6 +7,7 @@ import { TransactionPage } from '../pages/transaction/transaction';
 import { SummaryPage } from '../pages/summary/summary';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { CalculatePage } from '../pages/calculate/calculate';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Util } from '../providers/util';
 import { Database } from '../providers/database';
 import { SQLite } from '@ionic-native/sqlite';
+import { ScrollableTabs } from '../components/scrollable-tabs/scrollable-tabs';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SQLite } from '@ionic-native/sqlite';
     TransactionPage,
     SummaryPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    CalculatePage,
+    ScrollableTabs
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import { SQLite } from '@ionic-native/sqlite';
     TransactionPage,
     SummaryPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    CalculatePage
   ],
   providers: [
     StatusBar,

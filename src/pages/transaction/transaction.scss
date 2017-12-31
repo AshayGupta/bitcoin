@@ -21,14 +21,16 @@ page-transaction {
   .pos-profit{
     color: color($colors, secondary);
     padding-left: 5px;
+    font-size: 25px;
   }
 
   .neg-profit{
     color: color($colors, danger);
     padding-left: 5px;
+    font-size: 25px;
   }
 
-  .profit-title, .pos-profit, .neg-profit{
+  .profit-title{
     font-size: 25px;
   }
 
