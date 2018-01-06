@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.ionicframework.bitcoincalculator392461;
+package com.ashay.bitcoinlog;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

@@ -19,3 +19,16 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   -webkit-appearance: none;
   margin: 0;
 }
+
+.prompt-alert .alert-title{
+  color: color($colors, danger) !important;
+  font-family: serif !important; 
+}
+
+.alert-wrapper{
+  border-radius: 5px !important;
+}
+
+.alert-head{
+  text-align: center !important;
+}

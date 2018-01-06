@@ -59,7 +59,7 @@
             "locator": "ios"
         }
     ],
-    "description": "BitcoinCalculator: An Ionic project",
+    "description": "Bitcoin Log: An Ionic project",
     "cordova": {
         "plugins": {
             "cordova-sqlite-storage": {},

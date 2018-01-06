@@ -26,35 +26,22 @@ export class TransactionPage {
   private getData(){
     this.database.fetchTransactionData().then((data: TransactionData[]) => {
       this.transactionData = data;
-      // this.calculateProfit()
     },(error) => {
       this.util.showToast(ErrorMsg.ERROR_GET_TRANSACTION_DATA, ToastConstant.TOAST_TOP,)
     });
   }
 
-  // private calculateProfit(){
-  //   this.profit = 0;
-  //   for(let i=0; i<this.transactionData.length; i++){
-  //     if(this.transactionData[i].action == 'buy'){
-  //       this.profit -= parseFloat(this.transactionData[i].amount)
-  //       console.log("profit = ", this.profit)
-  //     }
-  //     else{
-  //       this.profit += parseFloat(this.transactionData[i].amount)
-  //       console.log("profit = ", this.profit)
-  //     }
-  //   }
-  // }
-
   private trashClicked(){
     let prompt = this.alertCtrl.create({
-        title: 'Delete Transaction!',
-        message: "Enter a No. to delete transaction.",
+        title: 'Delete Transaction !!',
+        // message: "Enter a No. to delete transaction.",
         enableBackdropDismiss: true,
+        cssClass: "prompt-alert",
         inputs: [
           {
             name: 'id',
-            placeholder: 'Enter No.'
+            placeholder: 'Enter a No. to delete transaction.',
+            type: 'number',
           },
         ],
         buttons: [

@@ -116,34 +116,22 @@ var TransactionPage = (function () {
         var _this = this;
         this.database.fetchTransactionData().then(function (data) {
             _this.transactionData = data;
-            // this.calculateProfit()
         }, function (error) {
             _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
         });
     };
-    // private calculateProfit(){
-    //   this.profit = 0;
-    //   for(let i=0; i<this.transactionData.length; i++){
-    //     if(this.transactionData[i].action == 'buy'){
-    //       this.profit -= parseFloat(this.transactionData[i].amount)
-    //       console.log("profit = ", this.profit)
-    //     }
-    //     else{
-    //       this.profit += parseFloat(this.transactionData[i].amount)
-    //       console.log("profit = ", this.profit)
-    //     }
-    //   }
-    // }
     TransactionPage.prototype.trashClicked = function () {
         var _this = this;
         var prompt = this.alertCtrl.create({
-            title: 'Delete Transaction!',
-            message: "Enter a No. to delete transaction.",
+            title: 'Delete Transaction !!',
+            // message: "Enter a No. to delete transaction.",
             enableBackdropDismiss: true,
+            cssClass: "prompt-alert",
             inputs: [
                 {
                     name: 'id',
-                    placeholder: 'Enter No.'
+                    placeholder: 'Enter a No. to delete transaction.',
+                    type: 'number',
                 },
             ],
             buttons: [
@@ -245,18 +233,15 @@ var SummaryPage = (function () {
             if (this.transactionData[i].action == this.buy) {
                 this.profitAmt -= parseFloat(this.transactionData[i].amount);
                 this.totalCoins += parseFloat(this.transactionData[i].coins);
-                console.log("profit = ", this.profitAmt);
-                console.log("coins = ", this.totalCoins);
             }
             else {
                 this.profitAmt += parseFloat(this.transactionData[i].amount);
                 this.totalCoins -= parseFloat(this.transactionData[i].coins);
-                console.log("profit = ", this.profitAmt);
-                console.log("coins = ", this.totalCoins);
             }
         }
-        this.totalCoins.toFixed(8);
-        // this.totalCoins = Math.round(this.totalCoins * 100000000) / 100000000;
+        console.log("profit = ", this.profitAmt);
+        console.log("coins = ", this.totalCoins);
+        this.totalCoins = Math.round(this.totalCoins * 100000000) / 100000000;
         this.addInvestedAmt();
     };
     SummaryPage.prototype.calculateDeposit = function () {

@@ -27977,6 +27977,19 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin: 0;
 }
 
+.prompt-alert .alert-title {
+  color: #f53d3d !important;
+  font-family: serif !important;
+}
+
+.alert-wrapper {
+  border-radius: 5px !important;
+}
+
+.alert-head {
+  text-align: center !important;
+}
+
 page-calculator ion-item {
   padding-left: 0px !important;
 }
@@ -28069,8 +28082,6 @@ page-home .deposit-amount {
 page-home .item-inner {
   border-bottom-style: inset !important;
   border-width: 1px !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
 }
 
 page-home .remove-bottom .item-inner {
@@ -28150,4 +28161,8 @@ page-transaction .profit-title {
 
 page-transaction .th {
   text-align: center;
+}
+
+page-transaction .prompt-alert {
+  border-radius: 5px !important;
 }
