@@ -28069,6 +28069,8 @@ page-home .deposit-amount {
 page-home .item-inner {
   border-bottom-style: inset !important;
   border-width: 1px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-home .remove-bottom .item-inner {

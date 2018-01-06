@@ -255,6 +255,8 @@ var SummaryPage = (function () {
                 console.log("coins = ", this.totalCoins);
             }
         }
+        this.totalCoins.toFixed(8);
+        // this.totalCoins = Math.round(this.totalCoins * 100000000) / 100000000;
         this.addInvestedAmt();
     };
     SummaryPage.prototype.calculateDeposit = function () {

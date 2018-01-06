@@ -59,16 +59,15 @@ export class SummaryPage {
       if(this.transactionData[i].action == this.buy){
         this.profitAmt -= parseFloat(this.transactionData[i].amount)
         this.totalCoins += parseFloat(this.transactionData[i].coins)
-        console.log("profit = ", this.profitAmt)
-        console.log("coins = ", this.totalCoins)
       }
       else{
         this.profitAmt += parseFloat(this.transactionData[i].amount)
         this.totalCoins -= parseFloat(this.transactionData[i].coins)
-        console.log("profit = ", this.profitAmt)
-        console.log("coins = ", this.totalCoins)
       }
     }
+    console.log("profit = ", this.profitAmt)
+    console.log("coins = ", this.totalCoins)
+    this.totalCoins = Math.round(this.totalCoins * 100000000) / 100000000;
     this.addInvestedAmt()
   }
 
