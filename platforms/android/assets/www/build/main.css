@@ -28066,6 +28066,15 @@ page-home .deposit-amount {
   border-radius: 5px;
 }
 
+page-home .item-inner {
+  border-bottom-style: inset !important;
+  border-width: 1px !important;
+}
+
+page-home .remove-bottom .item-inner {
+  border-bottom-style: none !important;
+}
+
 page-summary ion-card {
   border-radius: 5px !important;
   border-width: 1px;
