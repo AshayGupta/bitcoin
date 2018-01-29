@@ -63,7 +63,7 @@ export class Database{
 
   public fetchTransactionData(){
     return new Promise((resolve, reject) => {
-      let query = "SELECT * FROM transaction_tbl";
+      let query = "SELECT * FROM transaction_tbl ORDER BY id DESC";
       this.db.executeSql(query, []).then((data) => {
         let transaction_data: any = []
         for(let i=0; i<data.rows.length; i++){

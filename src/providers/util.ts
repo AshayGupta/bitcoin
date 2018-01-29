@@ -26,11 +26,10 @@ export class Util {
   }
 
   public isBlank(str: any) {
-      if (str == null || str == 'null' || str == undefined || str == 'undefined') {
+      if (str == null || str == 'null' || str == undefined || str == 'undefined' || str.trim().length == 0) {
           return true;
-      } else if (str.trim().length == 0) {
-          return true;
-      } else {
+      }
+      else {
           return false;
       }
   }
@@ -67,6 +66,10 @@ export class Util {
 
   public getTimeDate(){
       return new Date().getTime();
+  }
+
+  public roundDigit(item: any, digits: number){
+    return (Math.round(item * Math.pow(10, digits)) / Math.pow(10, digits)).toString();
   }
 
 }

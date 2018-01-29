@@ -28,6 +28,7 @@ export class CalculatorPage {
     }
     else{
       this.profit = (parseFloat(this.sellRate) - parseFloat(this.buyRate)) * (parseFloat(this.amount)/parseFloat(this.buyRate));
+      this.profit = this.util.roundDigit(this.profit, 1);
     }
   }
 

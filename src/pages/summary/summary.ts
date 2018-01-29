@@ -67,7 +67,8 @@ export class SummaryPage {
     }
     console.log("profit = ", this.profitAmt)
     console.log("coins = ", this.totalCoins)
-    this.totalCoins = Math.round(this.totalCoins * 100000000) / 100000000;
+    this.totalCoins = this.util.roundDigit(this.totalCoins, 8);
+    this.profitAmt = this.util.roundDigit(this.profitAmt, 1);
     this.addInvestedAmt()
   }
 

@@ -34,7 +34,6 @@ export class TransactionPage {
   private trashClicked(){
     let prompt = this.alertCtrl.create({
         title: 'Delete Transaction !!',
-        // message: "Enter a No. to delete transaction.",
         enableBackdropDismiss: true,
         cssClass: "prompt-alert",
         inputs: [
@@ -54,7 +53,9 @@ export class TransactionPage {
           {
             text: 'Save',
             handler: data => {
-              this.database.deleteTransactionData(data.id)
+              this.database.deleteTransactionData(data.id).then(data => {
+                this.getData();
+              });
             }
           }
         ]

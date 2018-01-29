@@ -21,6 +21,8 @@ export class HomePage {
   private sell: string = 'sell'
   private deposit: string = 'deposit'
   private withdraw: string = 'withdraw'
+  private takerFee = 0.0118;
+  private makerFee = 0.0059;
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database) {
     this.transaction = new TransactionData()
@@ -92,9 +94,18 @@ export class HomePage {
   }
 
   private saveTransactionData(){
+    if(this.transaction.action == this.buy){
+      this.transaction.coins = (parseFloat(this.transaction.coins) - (parseFloat(this.transaction.coins) * this.takerFee)).toString();
+    }
+    if(this.transaction.action == this.sell){
+      this.transaction.amount = (parseFloat(this.transaction.amount) - (parseFloat(this.transaction.amount) * this.makerFee)).toString();
+    }
+    this.transaction.coins = this.util.roundDigit(parseFloat(this.transaction.coins), 8);
+    this.transaction.amount = this.util.roundDigit(parseFloat(this.transaction.amount), 1);
+    
     this.database.insertTransactionData(this.transaction).then((data) => {
-      this.util.basicAlert(StringConstant.DATA_SAVED, "")
-      // this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
+      // this.util.basicAlert(StringConstant.DATA_SAVED, "")
+      this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
       this.transaction.rate = ""
       this.transaction.amount = ""
       this.transaction.coins = ""
