@@ -5,4 +5,5 @@ export class TransactionData{
   coins: string;
   action: string;
   date: string;
+  trading_fees: string;
 }

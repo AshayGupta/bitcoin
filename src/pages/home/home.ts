@@ -42,6 +42,9 @@ export class HomePage {
     else if(this.util.isBlank(this.transaction.coins)){
       this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
     }
+    else if(this.util.isBlank(this.transaction.trading_fees)){
+      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
+    }
     else{
       this.transaction.date = this.util.getTimeDate().toString()
       this.saveTransactionData()
@@ -95,14 +98,14 @@ export class HomePage {
 
   private saveTransactionData(){
     if(this.transaction.action == this.buy){
-      this.transaction.coins = (parseFloat(this.transaction.coins) - (parseFloat(this.transaction.coins) * this.takerFee)).toString();
+      this.transaction.coins = (parseFloat(this.transaction.coins) - (parseFloat(this.transaction.coins) * parseFloat(this.transaction.trading_fees))).toString();
     }
     if(this.transaction.action == this.sell){
-      this.transaction.amount = (parseFloat(this.transaction.amount) - (parseFloat(this.transaction.amount) * this.makerFee)).toString();
+      this.transaction.amount = (parseFloat(this.transaction.amount) - (parseFloat(this.transaction.amount) * parseFloat(this.transaction.trading_fees))).toString();
     }
     this.transaction.coins = this.util.roundDigit(parseFloat(this.transaction.coins), 8);
     this.transaction.amount = this.util.roundDigit(parseFloat(this.transaction.amount), 1);
-    
+
     this.database.insertTransactionData(this.transaction).then((data) => {
       // this.util.basicAlert(StringConstant.DATA_SAVED, "")
       this.util.showToast(StringConstant.DATA_SAVED, ToastConstant.TOAST_TOP)
