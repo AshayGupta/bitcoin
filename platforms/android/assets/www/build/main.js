@@ -1,1 +1,1139 @@
-webpackJsonp([0],{137:function(l,n){function t(l){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+l+"'.")})}t.keys=function(){return[]},t.resolve=t,l.exports=t,t.id=137},168:function(l,n){function t(l){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+l+"'.")})}t.keys=function(){return[]},t.resolve=t,l.exports=t,t.id=168},191:function(l,n,t){"use strict";function u(l){return g._19(0,[(l()(),g.Z(0,0,null,null,2,"ion-nav",[],null,null,null,V.b,V.a)),g._15(6144,null,L.a,null,[U.a]),g.Y(2,4374528,null,0,U.a,[[2,X.a],[2,q.a],G.a,W.a,K.a,g.j,g.u,g.z,g.i,$.l,H.a,[2,J.a],Q.a,g.k],{root:[0,"root"]},null),(l()(),g._18(-1,null,["\n"]))],function(l,n){l(n,2,0,n.component.rootPage)},null)}function a(l){return g._19(0,[(l()(),g.Z(0,0,null,null,4,"tr",[["class","tr-no-data"]],null,null,null,null,null)),(l()(),g._18(-1,null,["\n              "])),(l()(),g.Z(2,0,null,null,1,"td",[["class","td"],["colspan","5"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Data not available"])),(l()(),g._18(-1,null,["\n            "]))],null,null)}function o(l){return g._19(0,[(l()(),g.Z(0,0,null,null,2,"td",[["class","td-transaction-data"]],null,null,null,null,null)),(l()(),g.Z(1,0,null,null,1,"span",[["class","span-action-buy"]],null,null,null,null,null)),(l()(),g._18(2,null,["",""]))],null,function(l,n){l(n,2,0,n.parent.context.$implicit.action)})}function i(l){return g._19(0,[(l()(),g.Z(0,0,null,null,2,"td",[["class","td-transaction-data"]],null,null,null,null,null)),(l()(),g.Z(1,0,null,null,1,"span",[["class","span-action-sell"]],null,null,null,null,null)),(l()(),g._18(2,null,["",""]))],null,function(l,n){l(n,2,0,n.parent.context.$implicit.action)})}function e(l){return g._19(0,[(l()(),g.Z(0,0,null,null,19,"tr",[],null,null,null,null,null)),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(2,0,null,null,1,"td",[["class","td-transaction-data"]],null,null,null,null,null)),(l()(),g._18(3,null,["","."])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(5,0,null,null,1,"td",[["class","td-transaction-data"]],null,null,null,null,null)),(l()(),g._18(6,null,["",""])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(8,0,null,null,1,"td",[["class","td-transaction-data"]],null,null,null,null,null)),(l()(),g._18(9,null,["",""])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(11,0,null,null,1,"td",[["class","td-transaction-data"]],null,null,null,null,null)),(l()(),g._18(12,null,["",""])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.U(16777216,null,null,1,null,o)),g.Y(15,16384,null,0,tl.i,[g.I,g.F],{ngIf:[0,"ngIf"]},null),(l()(),g._18(-1,null,["\n                "])),(l()(),g.U(16777216,null,null,1,null,i)),g.Y(18,16384,null,0,tl.i,[g.I,g.F],{ngIf:[0,"ngIf"]},null),(l()(),g._18(-1,null,["\n            "]))],function(l,n){l(n,15,0,"buy"==n.context.$implicit.action);l(n,18,0,"sell"==n.context.$implicit.action)},function(l,n){l(n,3,0,n.context.$implicit.id);l(n,6,0,n.context.$implicit.rate);l(n,9,0,n.context.$implicit.amount);l(n,12,0,n.context.$implicit.coins)})}function s(l){return g._19(0,[(l()(),g.Z(0,0,null,null,22,"ion-header",[],null,null,null,null,null)),g.Y(1,16384,null,0,ul.a,[W.a,g.j,g.z,[2,X.a]],null,null),(l()(),g._18(-1,null,["\n  "])),(l()(),g.Z(3,0,null,null,18,"ion-toolbar",[["class","toolbar"],["color","primary"]],[[2,"statusbar-padding",null]],null,null,al.b,al.a)),g.Y(4,49152,null,0,ol.a,[W.a,g.j,g.z],{color:[0,"color"]},null),(l()(),g._18(-1,3,["\n    "])),(l()(),g.Z(6,0,null,3,2,"ion-title",[],null,null,null,il.b,il.a)),g.Y(7,49152,null,0,el.a,[W.a,g.j,g.z,[2,ol.a],[2,sl.a]],null,null),(l()(),g._18(-1,0,["Transactions"])),(l()(),g._18(-1,3,["\n    "])),(l()(),g.Z(10,0,null,2,10,"ion-buttons",[["end",""]],null,null,null,null,null)),g.Y(11,16384,null,1,rl.a,[W.a,g.j,g.z,[2,ol.a],[2,sl.a]],null,null),g._16(603979776,1,{_buttons:1}),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(14,0,null,null,5,"button",[["icon-only",""],["ion-button",""]],null,[[null,"click"]],function(l,n,t){var u=!0;if("click"===n){u=!1!==l.component.trashClicked()&&u}return u},cl.b,cl.a)),g.Y(15,1097728,[[1,4]],0,dl.a,[[8,""],W.a,g.j,g.z],null,null),(l()(),g._18(-1,0,["\n        "])),(l()(),g.Z(17,0,null,0,1,"ion-icon",[["name","trash"],["role","img"]],[[2,"hide",null]],null,null,null,null)),g.Y(18,147456,null,0,_l.a,[W.a,g.j,g.z],{name:[0,"name"]},null),(l()(),g._18(-1,0,["\n      "])),(l()(),g._18(-1,null,["\n    "])),(l()(),g._18(-1,3,["\n  "])),(l()(),g._18(-1,null,["\n"])),(l()(),g._18(-1,null,["\n\n\n"])),(l()(),g.Z(24,0,null,null,33,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,hl.b,hl.a)),g.Y(25,4374528,null,0,pl.a,[W.a,K.a,Q.a,g.j,g.z,G.a,gl.a,g.u,[2,X.a],[2,q.a]],null,null),(l()(),g._18(-1,1,["\n\n    "])),(l()(),g.Z(27,0,null,1,29,"div",[["class","table-responsive"]],null,null,null,null,null)),(l()(),g._18(-1,null,["\n        "])),(l()(),g.Z(29,0,null,null,26,"table",[["border","0"],["cellpadding","0"],["cellspacing","0"],["class","table"],["width","100%"]],null,null,null,null,null)),(l()(),g._18(-1,null,["\n            "])),(l()(),g.Z(31,0,null,null,24,"tbody",[],null,null,null,null,null)),(l()(),g.Z(32,0,null,null,16,"tr",[["style","font-size: 16px;"]],null,null,null,null,null)),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(34,0,null,null,1,"th",[["class","th"]],null,null,null,null,null)),(l()(),g._18(-1,null,["No."])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(37,0,null,null,1,"th",[["class","th"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Rate"])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(40,0,null,null,1,"th",[["class","th"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Amount"])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(43,0,null,null,1,"th",[["class","th"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Coins"])),(l()(),g._18(-1,null,["\n                "])),(l()(),g.Z(46,0,null,null,1,"th",[["class","th"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Action"])),(l()(),g._18(-1,null,["\n            "])),(l()(),g._18(-1,null,["\n            "])),(l()(),g.U(16777216,null,null,1,null,a)),g.Y(51,16384,null,0,tl.i,[g.I,g.F],{ngIf:[0,"ngIf"]},null),(l()(),g._18(-1,null,["\n            "])),(l()(),g.U(16777216,null,null,1,null,e)),g.Y(54,802816,null,0,tl.h,[g.I,g.F,g.p],{ngForOf:[0,"ngForOf"]},null),(l()(),g._18(-1,null,["\n        "])),(l()(),g._18(-1,null,["\n    "])),(l()(),g._18(-1,1,["\n\n"])),(l()(),g._18(-1,null,["\n\n"])),(l()(),g._18(-1,null,["\n"]))],function(l,n){var t=n.component;l(n,4,0,"primary");l(n,18,0,"trash");l(n,51,0,void 0==t.transactionData||0==t.transactionData.length);l(n,54,0,t.transactionData)},function(l,n){l(n,3,0,g._13(n,4)._sbPadding);l(n,17,0,g._13(n,18)._hidden);l(n,24,0,g._13(n,25).statusbarPadding,g._13(n,25)._hasRefresher)})}function r(l){return g._19(0,[(l()(),g.Z(0,0,null,null,11,"ion-header",[],null,null,null,null,null)),g.Y(1,16384,null,0,ul.a,[W.a,g.j,g.z,[2,X.a]],null,null),(l()(),g._18(-1,null,["\n  "])),(l()(),g.Z(3,0,null,null,7,"ion-toolbar",[["class","toolbar"],["color","primary"]],[[2,"statusbar-padding",null]],null,null,al.b,al.a)),g.Y(4,49152,null,0,ol.a,[W.a,g.j,g.z],{color:[0,"color"]},null),(l()(),g._18(-1,3,["\n    "])),(l()(),g.Z(6,0,null,3,2,"ion-title",[],null,null,null,il.b,il.a)),g.Y(7,49152,null,0,el.a,[W.a,g.j,g.z,[2,ol.a],[2,sl.a]],null,null),(l()(),g._18(-1,0,["Summary"])),(l()(),g._18(-1,3,["\n    "])),(l()(),g._18(-1,3,["\n  "])),(l()(),g._18(-1,null,["\n"])),(l()(),g._18(-1,null,["\n\n"])),(l()(),g.Z(13,0,null,null,82,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,hl.b,hl.a)),g.Y(14,4374528,null,0,pl.a,[W.a,K.a,Q.a,g.j,g.z,G.a,gl.a,g.u,[2,X.a],[2,q.a]],null,null),(l()(),g._18(-1,1,["\n\n  "])),(l()(),g.Z(16,0,null,1,15,"ion-card",[],null,null,null,null,null)),g.Y(17,16384,null,0,Tl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n    "])),(l()(),g.Z(19,0,null,null,11,"ion-card-content",[["class","card-content"]],null,null,null,null,null)),g.Y(20,16384,null,0,yl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(22,0,null,null,1,"span",[["class","left-text"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Deposit"])),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(25,0,null,null,1,"ion-icon",[["class","forward-icon"],["ios","ios-arrow-round-forward"],["md","md-arrow-round-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),g.Y(26,147456,null,0,_l.a,[W.a,g.j,g.z],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(28,0,null,null,1,"span",[["class","right-text"]],null,null,null,null,null)),(l()(),g._18(29,null,["Rs. ",""])),(l()(),g._18(-1,null,["\n    "])),(l()(),g._18(-1,null,["\n  "])),(l()(),g._18(-1,1,["\n\n  "])),(l()(),g.Z(33,0,null,1,27,"ion-card",[],null,null,null,null,null)),g.Y(34,16384,null,0,Tl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n    "])),(l()(),g.Z(36,0,null,null,23,"ion-card-content",[["class","card-content"]],null,null,null,null,null)),g.Y(37,16384,null,0,yl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(39,0,null,null,19,"ion-item",[["class","item item-block"],["style","padding-left: 0px; font-size: 20px"]],null,null,null,Dl.b,Dl.a)),g.Y(40,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,1,{contentLabel:0}),g._16(603979776,2,{_buttons:1}),g._16(603979776,3,{_icons:1}),g.Y(44,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n        "])),(l()(),g.Z(46,0,null,3,4,"ion-input",[["placeholder","Invested Amount"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"keyup"]],function(l,n,t){var u=!0,a=l.component;if("ngModelChange"===n){u=!1!==(a.investedAmt=t)&&u}if("keyup"===n){u=!1!==a.investedAmtEnter(t)&&u}return u},Al.b,Al.a)),g.Y(47,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(49,16384,null,0,wl.g,[wl.f],null,null),g.Y(50,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{disabled:[0,"disabled"],type:[1,"type"],placeholder:[2,"placeholder"]},null),(l()(),g._18(-1,2,["\n        "])),(l()(),g.Z(52,0,null,4,5,"button",[["class","edit-invested"],["icon-only",""],["ion-button",""],["item-right",""]],null,[[null,"click"]],function(l,n,t){var u=!0;if("click"===n){u=!1!==l.component.editClicked()&&u}return u},cl.b,cl.a)),g.Y(53,1097728,[[2,4]],0,dl.a,[[8,""],W.a,g.j,g.z],null,null),(l()(),g._18(-1,0,["\n          "])),(l()(),g.Z(55,0,null,0,1,"ion-icon",[["name","create"],["role","img"]],[[2,"hide",null]],null,null,null,null)),g.Y(56,147456,null,0,_l.a,[W.a,g.j,g.z],{name:[0,"name"]},null),(l()(),g._18(-1,0,["\n        "])),(l()(),g._18(-1,2,["\n      "])),(l()(),g._18(-1,null,["\n    "])),(l()(),g._18(-1,null,["\n  "])),(l()(),g._18(-1,1,["\n\n  "])),(l()(),g.Z(62,0,null,1,15,"ion-card",[],null,null,null,null,null)),g.Y(63,16384,null,0,Tl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n    "])),(l()(),g.Z(65,0,null,null,11,"ion-card-content",[["class","card-content"]],null,null,null,null,null)),g.Y(66,16384,null,0,yl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(68,0,null,null,1,"span",[["class","left-text"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Coins"])),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(71,0,null,null,1,"ion-icon",[["class","forward-icon"],["ios","ios-arrow-round-forward"],["md","md-arrow-round-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),g.Y(72,147456,null,0,_l.a,[W.a,g.j,g.z],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(74,0,null,null,1,"span",[["class","right-text"]],null,null,null,null,null)),(l()(),g._18(75,null,["",""])),(l()(),g._18(-1,null,["\n    "])),(l()(),g._18(-1,null,["\n  "])),(l()(),g._18(-1,1,["\n\n  "])),(l()(),g.Z(79,0,null,1,15,"ion-card",[],null,null,null,null,null)),g.Y(80,16384,null,0,Tl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n    "])),(l()(),g.Z(82,0,null,null,11,"ion-card-content",[["class","card-content"]],null,null,null,null,null)),g.Y(83,16384,null,0,yl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(85,0,null,null,1,"span",[["class","left-text"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Profit"])),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(88,0,null,null,1,"ion-icon",[["class","forward-icon"],["ios","ios-arrow-round-forward"],["md","md-arrow-round-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),g.Y(89,147456,null,0,_l.a,[W.a,g.j,g.z],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),g._18(-1,null,["\n      "])),(l()(),g.Z(91,0,null,null,1,"span",[["class","right-text"]],null,null,null,null,null)),(l()(),g._18(92,null,["Rs. ",""])),(l()(),g._18(-1,null,["\n    "])),(l()(),g._18(-1,null,["\n  "])),(l()(),g._18(-1,1,["\n\n"])),(l()(),g._18(-1,null,["\n"]))],function(l,n){var t=n.component;l(n,4,0,"primary");l(n,26,0,"ios-arrow-round-forward","md-arrow-round-forward");l(n,47,0,t.edit,t.investedAmt);l(n,50,0,t.edit,"number","Invested Amount");l(n,56,0,"create");l(n,72,0,"ios-arrow-round-forward","md-arrow-round-forward");l(n,89,0,"ios-arrow-round-forward","md-arrow-round-forward")},function(l,n){var t=n.component;l(n,3,0,g._13(n,4)._sbPadding);l(n,13,0,g._13(n,14).statusbarPadding,g._13(n,14)._hasRefresher);l(n,25,0,g._13(n,26)._hidden);l(n,29,0,t.depositAmt);l(n,46,0,g._13(n,49).ngClassUntouched,g._13(n,49).ngClassTouched,g._13(n,49).ngClassPristine,g._13(n,49).ngClassDirty,g._13(n,49).ngClassValid,g._13(n,49).ngClassInvalid,g._13(n,49).ngClassPending);l(n,55,0,g._13(n,56)._hidden);l(n,71,0,g._13(n,72)._hidden);l(n,75,0,t.totalCoins);l(n,88,0,g._13(n,89)._hidden);l(n,92,0,t.profitDisplay)})}function c(l){return g._19(0,[(l()(),g.Z(0,0,null,null,12,"ion-header",[],null,null,null,null,null)),g.Y(1,16384,null,0,ul.a,[W.a,g.j,g.z,[2,X.a]],null,null),(l()(),g._18(-1,null,["\n  "])),(l()(),g.Z(3,0,null,null,8,"ion-toolbar",[["class","toolbar"],["color","primary"]],[[2,"statusbar-padding",null]],null,null,al.b,al.a)),g.Y(4,49152,null,0,ol.a,[W.a,g.j,g.z],{color:[0,"color"]},null),(l()(),g._18(-1,3,["\n    "])),(l()(),g._18(-1,3,["\n\n    "])),(l()(),g.Z(7,0,null,3,2,"ion-title",[],null,null,null,il.b,il.a)),g.Y(8,49152,null,0,el.a,[W.a,g.j,g.z,[2,ol.a],[2,sl.a]],null,null),(l()(),g._18(-1,0,["Home"])),(l()(),g._18(-1,3,["\n\n    "])),(l()(),g._18(-1,3,["\n\n  "])),(l()(),g._18(-1,null,["\n"])),(l()(),g._18(-1,null,["\n\n\n\n"])),(l()(),g.Z(14,0,null,null,116,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,hl.b,hl.a)),g.Y(15,4374528,null,0,pl.a,[W.a,K.a,Q.a,g.j,g.z,G.a,gl.a,g.u,[2,X.a],[2,q.a]],null,null),(l()(),g._18(-1,1,["\n\n  "])),(l()(),g.Z(17,0,null,1,76,"ion-card",[],null,null,null,null,null)),g.Y(18,16384,null,0,Tl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n    "])),(l()(),g.Z(20,0,null,null,72,"ion-card-content",[],null,null,null,null,null)),g.Y(21,16384,null,0,yl.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,null,["\n        "])),(l()(),g.Z(23,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(24,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,1,{contentLabel:0}),g._16(603979776,2,{_buttons:1}),g._16(603979776,3,{_icons:1}),g.Y(28,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(30,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),g.Y(31,16384,[[1,4]],0,Rl.a,[W.a,g.j,g.z,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),g._18(-1,null,["Rate"])),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(34,0,null,3,4,"ion-input",[["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.transaction.rate=t)&&u}return u},Al.b,Al.a)),g.Y(35,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(37,16384,null,0,wl.g,[wl.f],null,null),g.Y(38,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"]},null),(l()(),g._18(-1,2,["\n        "])),(l()(),g._18(-1,null,["\n        "])),(l()(),g.Z(41,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(42,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,4,{contentLabel:0}),g._16(603979776,5,{_buttons:1}),g._16(603979776,6,{_icons:1}),g.Y(46,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(48,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),g.Y(49,16384,[[4,4]],0,Rl.a,[W.a,g.j,g.z,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),g._18(-1,null,["Amount"])),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(52,0,null,3,4,"ion-input",[["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.transaction.amount=t)&&u}return u},Al.b,Al.a)),g.Y(53,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(55,16384,null,0,wl.g,[wl.f],null,null),g.Y(56,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"]},null),(l()(),g._18(-1,2,["\n        "])),(l()(),g._18(-1,null,["\n        "])),(l()(),g.Z(59,0,null,null,16,"ion-item",[["class","ion-item-border item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(60,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,7,{contentLabel:0}),g._16(603979776,8,{_buttons:1}),g._16(603979776,9,{_icons:1}),g.Y(64,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(66,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),g.Y(67,16384,[[7,4]],0,Rl.a,[W.a,g.j,g.z,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),g._18(-1,null,["Coins"])),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(70,0,null,3,4,"ion-input",[["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.transaction.coins=t)&&u}return u},Al.b,Al.a)),g.Y(71,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(73,16384,null,0,wl.g,[wl.f],null,null),g.Y(74,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"]},null),(l()(),g._18(-1,2,["\n        "])),(l()(),g._18(-1,null,["\n\n        "])),(l()(),g.Z(77,0,null,null,14,"ion-item",[["class","remove-bottom item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(78,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,10,{contentLabel:0}),g._16(603979776,11,{_buttons:1}),g._16(603979776,12,{_icons:1}),g.Y(82,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(84,0,null,2,2,"button",[["class","button-buy"],["color","danger"],["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,t){var u=!0;if("click"===n){u=!1!==l.component.buyClicked()&&u}return u},cl.b,cl.a)),g.Y(85,1097728,[[11,4]],0,dl.a,[[8,""],W.a,g.j,g.z],{color:[0,"color"],outline:[1,"outline"]},null),(l()(),g._18(-1,0,["Buy"])),(l()(),g._18(-1,2,["\n          "])),(l()(),g.Z(88,0,null,2,2,"button",[["class","button-sell"],["color","secondary"],["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,t){var u=!0;if("click"===n){u=!1!==l.component.sellClicked()&&u}return u},cl.b,cl.a)),g.Y(89,1097728,[[11,4]],0,dl.a,[[8,""],W.a,g.j,g.z],{color:[0,"color"],outline:[1,"outline"]},null),(l()(),g._18(-1,0,["Sell"])),(l()(),g._18(-1,2,["\n        "])),(l()(),g._18(-1,null,["\n    "])),(l()(),g._18(-1,null,["\n  "])),(l()(),g._18(-1,1,["\n\n  "])),(l()(),g.Z(95,0,null,1,16,"ion-item",[["class","item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(96,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,13,{contentLabel:0}),g._16(603979776,14,{_buttons:1}),g._16(603979776,15,{_icons:1}),g.Y(100,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(102,0,null,3,4,"ion-input",[["class",""],["placeholder","Amount"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.depositData.deposit_amount=t)&&u}return u},Al.b,Al.a)),g.Y(103,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(105,16384,null,0,wl.g,[wl.f],null,null),g.Y(106,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(108,0,null,4,2,"button",[["class","button-deposit"],["color","primary"],["ion-button",""],["item-right",""]],null,[[null,"click"]],function(l,n,t){var u=!0;if("click"===n){u=!1!==l.component.depositClicked()&&u}return u},cl.b,cl.a)),g.Y(109,1097728,[[14,4]],0,dl.a,[[8,""],W.a,g.j,g.z],{color:[0,"color"]},null),(l()(),g._18(-1,0,["Deposit"])),(l()(),g._18(-1,2,["\n  "])),(l()(),g._18(-1,1,["\n  "])),(l()(),g.Z(113,0,null,1,16,"ion-item",[["class","item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(114,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,16,{contentLabel:0}),g._16(603979776,17,{_buttons:1}),g._16(603979776,18,{_icons:1}),g.Y(118,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(120,0,null,3,4,"ion-input",[["class",""],["placeholder","Amount"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.depositData.withdraw_amount=t)&&u}return u},Al.b,Al.a)),g.Y(121,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(123,16384,null,0,wl.g,[wl.f],null,null),g.Y(124,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(126,0,null,4,2,"button",[["class","button-deposit"],["color","primary"],["ion-button",""],["item-right",""]],null,[[null,"click"]],function(l,n,t){var u=!0;if("click"===n){u=!1!==l.component.withdrawClicked()&&u}return u},cl.b,cl.a)),g.Y(127,1097728,[[17,4]],0,dl.a,[[8,""],W.a,g.j,g.z],{color:[0,"color"]},null),(l()(),g._18(-1,0,["Withdraw"])),(l()(),g._18(-1,2,["\n  "])),(l()(),g._18(-1,1,["\n\n\n\n"])),(l()(),g._18(-1,null,["\n"]))],function(l,n){var t=n.component;l(n,4,0,"primary");l(n,35,0,t.transaction.rate);l(n,38,0,"number");l(n,53,0,t.transaction.amount);l(n,56,0,"number");l(n,71,0,t.transaction.coins);l(n,74,0,"number");l(n,85,0,"danger","");l(n,89,0,"secondary","");l(n,103,0,t.depositData.deposit_amount);l(n,106,0,"number","Amount");l(n,109,0,"primary");l(n,121,0,t.depositData.withdraw_amount);l(n,124,0,"number","Amount");l(n,127,0,"primary")},function(l,n){l(n,3,0,g._13(n,4)._sbPadding);l(n,14,0,g._13(n,15).statusbarPadding,g._13(n,15)._hasRefresher);l(n,34,0,g._13(n,37).ngClassUntouched,g._13(n,37).ngClassTouched,g._13(n,37).ngClassPristine,g._13(n,37).ngClassDirty,g._13(n,37).ngClassValid,g._13(n,37).ngClassInvalid,g._13(n,37).ngClassPending);l(n,52,0,g._13(n,55).ngClassUntouched,g._13(n,55).ngClassTouched,g._13(n,55).ngClassPristine,g._13(n,55).ngClassDirty,g._13(n,55).ngClassValid,g._13(n,55).ngClassInvalid,g._13(n,55).ngClassPending);l(n,70,0,g._13(n,73).ngClassUntouched,g._13(n,73).ngClassTouched,g._13(n,73).ngClassPristine,g._13(n,73).ngClassDirty,g._13(n,73).ngClassValid,g._13(n,73).ngClassInvalid,g._13(n,73).ngClassPending);l(n,102,0,g._13(n,105).ngClassUntouched,g._13(n,105).ngClassTouched,g._13(n,105).ngClassPristine,g._13(n,105).ngClassDirty,g._13(n,105).ngClassValid,g._13(n,105).ngClassInvalid,g._13(n,105).ngClassPending);l(n,120,0,g._13(n,123).ngClassUntouched,g._13(n,123).ngClassTouched,g._13(n,123).ngClassPristine,g._13(n,123).ngClassDirty,g._13(n,123).ngClassValid,g._13(n,123).ngClassInvalid,g._13(n,123).ngClassPending)})}function d(l){return g._19(0,[(l()(),g.Z(0,0,null,null,15,"ion-tabs",[],null,null,null,Il.b,Il.a)),g._15(6144,null,L.a,null,[Sl.a]),g.Y(2,4374528,null,0,Sl.a,[[2,q.a],[2,X.a],G.a,W.a,g.j,K.a,g.z,J.a,gl.a],null,null),(l()(),g._18(-1,0,["\n  "])),(l()(),g.Z(4,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","home"],["tabTitle","Home"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,Pl.b,Pl.a)),g.Y(5,245760,null,0,Ml.a,[Sl.a,G.a,W.a,K.a,g.j,g.u,g.z,g.i,g.g,$.l,H.a,[2,J.a],Q.a,g.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),g._18(-1,0,["\n  "])),(l()(),g.Z(7,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","repeat"],["tabTitle","Transactions"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,Pl.b,Pl.a)),g.Y(8,245760,null,0,Ml.a,[Sl.a,G.a,W.a,K.a,g.j,g.u,g.z,g.i,g.g,$.l,H.a,[2,J.a],Q.a,g.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),g._18(-1,0,["\n  "])),(l()(),g.Z(10,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","book"],["tabTitle","Summary"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,Pl.b,Pl.a)),g.Y(11,245760,null,0,Ml.a,[Sl.a,G.a,W.a,K.a,g.j,g.u,g.z,g.i,g.g,$.l,H.a,[2,J.a],Q.a,g.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),g._18(-1,0,["\n  "])),(l()(),g.Z(13,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","calculator"],["tabTitle","Calculate"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,Pl.b,Pl.a)),g.Y(14,245760,null,0,Ml.a,[Sl.a,G.a,W.a,K.a,g.j,g.u,g.z,g.i,g.g,$.l,H.a,[2,J.a],Q.a,g.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),g._18(-1,0,["\n"])),(l()(),g._18(-1,null,["\n"]))],function(l,n){var t=n.component;l(n,5,0,t.tab1Root,"Home","home");l(n,8,0,t.tab2Root,"Transactions","repeat");l(n,11,0,t.tab3Root,"Summary","book");l(n,14,0,t.tab4Root,"Calculate","calculator")},function(l,n){l(n,4,0,g._13(n,5)._tabId,g._13(n,5)._btnId);l(n,7,0,g._13(n,8)._tabId,g._13(n,8)._btnId);l(n,10,0,g._13(n,11)._tabId,g._13(n,11)._btnId);l(n,13,0,g._13(n,14)._tabId,g._13(n,14)._btnId)})}function _(l){return g._19(0,[(l()(),g.Z(0,0,null,null,11,"ion-header",[],null,null,null,null,null)),g.Y(1,16384,null,0,ul.a,[W.a,g.j,g.z,[2,X.a]],null,null),(l()(),g._18(-1,null,["\n  "])),(l()(),g.Z(3,0,null,null,7,"ion-toolbar",[["class","toolbar"],["color","primary"]],[[2,"statusbar-padding",null]],null,null,al.b,al.a)),g.Y(4,49152,null,0,ol.a,[W.a,g.j,g.z],{color:[0,"color"]},null),(l()(),g._18(-1,3,["\n    "])),(l()(),g.Z(6,0,null,3,2,"ion-title",[],null,null,null,il.b,il.a)),g.Y(7,49152,null,0,el.a,[W.a,g.j,g.z,[2,ol.a],[2,sl.a]],null,null),(l()(),g._18(-1,0,["Calculator"])),(l()(),g._18(-1,3,["\n    "])),(l()(),g._18(-1,3,["\n  "])),(l()(),g._18(-1,null,["\n"])),(l()(),g._18(-1,null,["\n\n"])),(l()(),g.Z(13,0,null,null,70,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,hl.b,hl.a)),g.Y(14,4374528,null,0,pl.a,[W.a,K.a,Q.a,g.j,g.z,G.a,gl.a,g.u,[2,X.a],[2,q.a]],null,null),(l()(),g._18(-1,1,["\n  "])),(l()(),g._18(-1,1,["\n    "])),(l()(),g.Z(17,0,null,1,16,"ion-item",[["class","item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(18,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,1,{contentLabel:0}),g._16(603979776,2,{_buttons:1}),g._16(603979776,3,{_icons:1}),g.Y(22,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(24,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),g.Y(25,16384,[[1,4]],0,Rl.a,[W.a,g.j,g.z,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),g._18(-1,null,["Buy Rate"])),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(28,0,null,3,4,"ion-input",[["placeholder","Enter Buy Rate"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.buyRate=t)&&u}return u},Al.b,Al.a)),g.Y(29,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(31,16384,null,0,wl.g,[wl.f],null,null),g.Y(32,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),g._18(-1,2,["\n    "])),(l()(),g._18(-1,1,["\n\n    "])),(l()(),g.Z(35,0,null,1,16,"ion-item",[["class","item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(36,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,4,{contentLabel:0}),g._16(603979776,5,{_buttons:1}),g._16(603979776,6,{_icons:1}),g.Y(40,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(42,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),g.Y(43,16384,[[4,4]],0,Rl.a,[W.a,g.j,g.z,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),g._18(-1,null,["Sell Rate"])),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(46,0,null,3,4,"ion-input",[["placeholder","Enter Sell Rate"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.sellRate=t)&&u}return u},Al.b,Al.a)),g.Y(47,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(49,16384,null,0,wl.g,[wl.f],null,null),g.Y(50,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),g._18(-1,2,["\n    "])),(l()(),g._18(-1,1,["\n\n    "])),(l()(),g.Z(53,0,null,1,16,"ion-item",[["class","item item-block"]],null,null,null,Dl.b,Dl.a)),g.Y(54,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,7,{contentLabel:0}),g._16(603979776,8,{_buttons:1}),g._16(603979776,9,{_icons:1}),g.Y(58,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(60,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),g.Y(61,16384,[[7,4]],0,Rl.a,[W.a,g.j,g.z,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),g._18(-1,null,["Amount"])),(l()(),g._18(-1,2,["\n      "])),(l()(),g.Z(64,0,null,3,4,"ion-input",[["placeholder","Enter Amount"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,t){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.amount=t)&&u}return u},Al.b,Al.a)),g.Y(65,671744,null,0,wl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),g._15(2048,null,wl.f,null,[wl.h]),g.Y(67,16384,null,0,wl.g,[wl.f],null,null),g.Y(68,5423104,null,0,El.a,[W.a,K.a,vl.a,G.a,g.j,g.z,[2,pl.a],[2,Cl.a],[2,wl.f],Q.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),g._18(-1,2,["\n    "])),(l()(),g._18(-1,1,["\n  "])),(l()(),g._18(-1,1,["\n\n  "])),(l()(),g.Z(72,0,null,1,10,"ion-item",[["class","ion-item-center item item-block"],["no-lines",""]],null,null,null,Dl.b,Dl.a)),g.Y(73,1097728,null,3,Cl.a,[vl.a,W.a,g.j,g.z,[2,Yl.a]],null,null),g._16(335544320,10,{contentLabel:0}),g._16(603979776,11,{_buttons:1}),g._16(603979776,12,{_icons:1}),g.Y(77,16384,null,0,Zl.a,[],null,null),(l()(),g._18(-1,2,["\n    "])),(l()(),g.Z(79,0,null,2,2,"button",[["class","button-calculate"],["color","primary"],["ion-button",""]],null,[[null,"click"]],function(l,n,t){var u=!0;if("click"===n){u=!1!==l.component.calculateClicked()&&u}return u},cl.b,cl.a)),g.Y(80,1097728,[[11,4]],0,dl.a,[[8,""],W.a,g.j,g.z],{color:[0,"color"]},null),(l()(),g._18(-1,0,["Calculate"])),(l()(),g._18(-1,2,["\n  "])),(l()(),g._18(-1,1,["\n\n"])),(l()(),g._18(-1,null,["\n\n"])),(l()(),g.Z(85,0,null,null,13,"ion-footer",[],null,null,null,null,null)),g.Y(86,16384,null,0,xl.a,[W.a,g.j,g.z,[2,X.a]],null,null),(l()(),g._18(-1,null,["\n  "])),(l()(),g.Z(88,0,null,null,9,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,al.b,al.a)),g.Y(89,49152,null,0,ol.a,[W.a,g.j,g.z],null,null),(l()(),g._18(-1,3,["\n    "])),(l()(),g.Z(91,0,null,3,5,"ion-title",[["class","ion-title-profit"]],null,null,null,il.b,il.a)),g.Y(92,49152,null,0,el.a,[W.a,g.j,g.z,[2,ol.a],[2,sl.a]],null,null),(l()(),g.Z(93,0,null,0,1,"span",[["class","profit-title"]],null,null,null,null,null)),(l()(),g._18(-1,null,["Profit : "])),(l()(),g.Z(95,0,null,0,1,"span",[["class","pos-profit"]],null,null,null,null,null)),(l()(),g._18(96,null,["",""])),(l()(),g._18(-1,3,["\n  "])),(l()(),g._18(-1,null,["\n"])),(l()(),g._18(-1,null,["\n"]))],function(l,n){var t=n.component;l(n,4,0,"primary");l(n,29,0,t.buyRate);l(n,32,0,"number","Enter Buy Rate");l(n,47,0,t.sellRate);l(n,50,0,"number","Enter Sell Rate");l(n,65,0,t.amount);l(n,68,0,"number","Enter Amount");l(n,80,0,"primary")},function(l,n){var t=n.component;l(n,3,0,g._13(n,4)._sbPadding);l(n,13,0,g._13(n,14).statusbarPadding,g._13(n,14)._hasRefresher);l(n,28,0,g._13(n,31).ngClassUntouched,g._13(n,31).ngClassTouched,g._13(n,31).ngClassPristine,g._13(n,31).ngClassDirty,g._13(n,31).ngClassValid,g._13(n,31).ngClassInvalid,g._13(n,31).ngClassPending);l(n,46,0,g._13(n,49).ngClassUntouched,g._13(n,49).ngClassTouched,g._13(n,49).ngClassPristine,g._13(n,49).ngClassDirty,g._13(n,49).ngClassValid,g._13(n,49).ngClassInvalid,g._13(n,49).ngClassPending);l(n,64,0,g._13(n,67).ngClassUntouched,g._13(n,67).ngClassTouched,g._13(n,67).ngClassPristine,g._13(n,67).ngClassDirty,g._13(n,67).ngClassValid,g._13(n,67).ngClassInvalid,g._13(n,67).ngClassPending);l(n,88,0,g._13(n,89)._sbPadding);l(n,96,0,t.profit)})}Object.defineProperty(n,"__esModule",{value:!0});var h,p=t(38),g=t(0),b=(t(4),t(27),t(80)),m=t(81),f=function(){function l(l,n){this.toastCtrl=l,this.alertCtrl=n}return l.prototype.basicAlert=function(l,n){this.alertCtrl.create({title:l,message:n,enableBackdropDismiss:!1,buttons:[{text:"OK",handler:function(){}}]}).present()},l.prototype.isBlank=function(l){return null==l||"null"==l||void 0==l||"undefined"==l||0==l.trim().length},l.prototype.showToast=function(l,n){this.toastCtrl.create({message:l,duration:4e3,position:n,dismissOnPageChange:!0}).present()},l.prototype.showToastWithButton=function(l,n,t,u){this.toastCtrl.create({message:l,duration:4e3,position:n,showCloseButton:t,closeButtonText:u,dismissOnPageChange:!0}).present()},l.prototype.removeNull=function(l){return"null"==l||null==l||void 0==l?"":l},l.prototype.getTimeDate=function(){return(new Date).getTime()},l.prototype.roundDigit=function(l,n){return(Math.round(l*Math.pow(10,n))/Math.pow(10,n)).toString()},l}();!function(l){l.OK="OK",l.DATA_SAVED="Data saved"}(h||(h={}));var T;!function(l){l.ERROR_SAVING_DATA="Error in saving data",l.ERROR_GET_TRANSACTION_DATA="Error in getting transaction data",l.ERROR_GET_DEPOSIT_DATA="Error in getting deposit data"}(T||(T={}));var y;!function(l){l.TOAST_TOP="top",l.TOAST_MIDDLE="middle",l.TOAST_BOTTOM="bottom"}(y||(y={}));var D=t(125),C=(t(225),function(){function l(l,n){this.util=l,this.sqlite=n}return l.prototype.createDatabase=function(){var l=this;this.sqlite.create({name:"bitcoin.db",location:"default"}).then(function(n){l.db=n,l.createTable()},function(l){console.log("Error in creating bitcoin.db")})},l.prototype.createTable=function(){this.db.executeSql("CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, coins TEXT, action TEXT, date TEXT)",{}).catch(function(l){return console.log("Error in creating transaction_tbl",l)}),this.db.executeSql("CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, action TEXT, date TEXT)",{}).catch(function(l){return console.log("Error in creating deposit_tbl",l)}),console.log("Tables are created")},l.prototype.selectAllFromTable=function(l){this.db.executeSql("SELECT * FROM "+l,[]).then(function(n){for(var t=0;t<n.rows.length;t++)console.log("All data from "+l+" --\x3e ",n.rows.item(t))},function(l){console.log("DB error_selectAllFromTable ",l)})},l.prototype.insertTransactionData=function(l){var n=this;return new Promise(function(t,u){var a=[n.util.removeNull(l.rate),n.util.removeNull(l.amount),n.util.removeNull(l.coins),n.util.removeNull(l.action),n.util.removeNull(l.date)];n.db.executeSql("INSERT INTO transaction_tbl (rate, amount, coins, action, date) VALUES (?,?,?,?,?)",a).then(function(l){t(l)},function(l){console.log("DB error_insertTransactionData ",l),u(l)})})},l.prototype.fetchTransactionData=function(){var l=this;return new Promise(function(n,t){l.db.executeSql("SELECT * FROM transaction_tbl ORDER BY id DESC",[]).then(function(l){for(var t=[],u=0;u<l.rows.length;u++)t.push(l.rows.item(u));n(t)},function(l){console.log("DB error_insertTransactionData ",l),t(l)})})},l.prototype.insertDepositData=function(l){var n=this;return new Promise(function(t,u){var a=[n.util.removeNull(l.amount),n.util.removeNull(l.action),n.util.removeNull(l.date)];n.db.executeSql("INSERT INTO deposit_tbl (amount, action, date) VALUES (?,?,?)",a).then(function(l){t(l)},function(l){console.log("DB error_insertDepositData ",l),u(l)})})},l.prototype.fetchDepositData=function(){var l=this;return new Promise(function(n,t){l.db.executeSql("SELECT * FROM deposit_tbl",[]).then(function(l){for(var t=[],u=0;u<l.rows.length;u++)t.push(l.rows.item(u));n(t)},function(l){console.log("DB error_fetchDepositData ",l),t(l)})})},l.prototype.deleteTransactionData=function(l){var n=this;return new Promise(function(t,u){n.db.executeSql("DELETE FROM transaction_tbl WHERE id = '"+l+"'",[]).then(function(l){t(l)},function(l){console.log("DB error_deleteTransactionData ",l),u(l)})})},l.prototype.deleteDepositData=function(){var l=this;return new Promise(function(n,t){l.db.executeSql("DELETE FROM deposit_tbl",[]).then(function(l){n(l)},function(l){console.log("DB error_deleteDepositData ",l),t(l)})})},l}()),v=function(){function l(l,n,t,u){this.navCtrl=l,this.util=n,this.database=t,this.alertCtrl=u,this.profit=0}return l.prototype.ionViewWillEnter=function(){this.getData()},l.prototype.getData=function(){var l=this;this.database.fetchTransactionData().then(function(n){l.transactionData=n},function(n){l.util.showToast(T.ERROR_GET_TRANSACTION_DATA,y.TOAST_TOP)})},l.prototype.trashClicked=function(){var l=this;this.alertCtrl.create({title:"Delete Transaction !!",enableBackdropDismiss:!0,cssClass:"prompt-alert",inputs:[{name:"id",placeholder:"Enter a No. to delete transaction.",type:"number"}],buttons:[{text:"Cancel",handler:function(l){console.log("Cancel clicked")}},{text:"Save",handler:function(n){l.database.deleteTransactionData(n.id).then(function(n){l.getData()})}}]}).present()},l}(),Y=function(){function l(l,n,t){this.navCtrl=l,this.util=n,this.database=t,this.buy="buy",this.sell="sell",this.deposit="deposit",this.withdraw="withdraw",this.profitAmt=0,this.profitDisplay=0,this.totalCoins=0,this.depositAmt=0,this.investedAmt=0,this.edit=!0}return l.prototype.ionViewWillEnter=function(){this.getTransactionData(),this.getDepositData()},l.prototype.getTransactionData=function(){var l=this;this.database.fetchTransactionData().then(function(n){l.transactionData=n,l.calculateProfit()},function(n){l.util.showToast(T.ERROR_GET_TRANSACTION_DATA,y.TOAST_TOP)})},l.prototype.getDepositData=function(){var l=this;this.database.fetchDepositData().then(function(n){l.depositData=n,l.calculateDeposit()},function(n){l.util.showToast(T.ERROR_GET_DEPOSIT_DATA,y.TOAST_TOP)})},l.prototype.calculateProfit=function(){this.profitAmt=0,this.totalCoins=0;for(var l=0;l<this.transactionData.length;l++)this.transactionData[l].action==this.buy?(this.profitAmt-=parseFloat(this.transactionData[l].amount),this.totalCoins+=parseFloat(this.transactionData[l].coins)):(this.profitAmt+=parseFloat(this.transactionData[l].amount),this.totalCoins-=parseFloat(this.transactionData[l].coins));console.log("profit = ",this.profitAmt),console.log("coins = ",this.totalCoins),this.totalCoins=this.util.roundDigit(this.totalCoins,8),this.profitAmt=this.util.roundDigit(this.profitAmt,1),this.addInvestedAmt()},l.prototype.calculateDeposit=function(){this.depositAmt=0;for(var l=0;l<this.depositData.length;l++)this.depositData[l].action==this.deposit?this.depositAmt+=parseFloat(this.depositData[l].amount):this.depositAmt-=parseFloat(this.depositData[l].amount),this.depositAmt<0&&(this.depositAmt=0,this.database.deleteDepositData()),console.log("deposit = ",this.depositAmt)},l.prototype.investedAmtEnter=function(l){console.log(l.target.value),window.localStorage.setItem("investedAmt",l.target.value),this.addInvestedAmt()},l.prototype.addInvestedAmt=function(){this.investedAmt=window.localStorage.getItem("investedAmt"),this.profitDisplay=this.util.isBlank(this.investedAmt)?this.util.roundDigit(this.profitAmt,1):this.util.roundDigit(parseFloat(this.profitAmt)+parseFloat(this.investedAmt),1)},l.prototype.editClicked=function(){this.edit=0==this.edit},l}(),Z=function(){return function(){}}(),A=function(){return function(){}}(),w=function(){function l(l,n,t){this.navCtrl=l,this.util=n,this.database=t,this.toastMsg="All fields are mandatory to fill",this.depositMsg="Enter deposit amount",this.buy="buy",this.sell="sell",this.deposit="deposit",this.withdraw="withdraw",this.takerFee=.0118,this.makerFee=.0059,this.transaction=new Z,this.depositData=new A}return l.prototype.ionViewDidEnter=function(){},l.prototype.validate=function(){this.util.isBlank(this.transaction.rate)?this.util.showToastWithButton(this.toastMsg,y.TOAST_TOP,!0,h.OK):this.util.isBlank(this.transaction.amount)?this.util.showToastWithButton(this.toastMsg,y.TOAST_TOP,!0,h.OK):this.util.isBlank(this.transaction.coins)?this.util.showToastWithButton(this.toastMsg,y.TOAST_TOP,!0,h.OK):(this.transaction.date=this.util.getTimeDate().toString(),this.saveTransactionData())},l.prototype.buyClicked=function(){this.transaction.action=this.buy,this.validate()},l.prototype.sellClicked=function(){this.transaction.action=this.sell,this.validate()},l.prototype.depositClicked=function(){this.util.isBlank(this.depositData.deposit_amount)?this.util.showToastWithButton(this.depositMsg,y.TOAST_TOP,!0,h.OK):(this.depositData.date=this.util.getTimeDate().toString(),this.depositData.action=this.deposit,this.depositData.amount=this.depositData.deposit_amount,this.saveDepositData())},l.prototype.withdrawClicked=function(){this.util.isBlank(this.depositData.withdraw_amount)?this.util.showToastWithButton(this.depositMsg,y.TOAST_TOP,!0,h.OK):(this.depositData.date=this.util.getTimeDate().toString(),this.depositData.action=this.withdraw,this.depositData.amount=this.depositData.withdraw_amount,this.saveDepositData())},l.prototype.saveDepositData=function(){var l=this;this.database.insertDepositData(this.depositData).then(function(n){l.util.basicAlert(h.DATA_SAVED,""),l.depositData.deposit_amount="",l.depositData.withdraw_amount=""},function(n){l.util.showToast(T.ERROR_SAVING_DATA,y.TOAST_TOP)})},l.prototype.saveTransactionData=function(){var l=this;this.transaction.action==this.buy&&(this.transaction.coins=(parseFloat(this.transaction.coins)-parseFloat(this.transaction.coins)*this.takerFee).toString()),this.transaction.action==this.sell&&(this.transaction.amount=(parseFloat(this.transaction.amount)-parseFloat(this.transaction.amount)*this.makerFee).toString()),this.transaction.coins=this.util.roundDigit(parseFloat(this.transaction.coins),8),this.transaction.amount=this.util.roundDigit(parseFloat(this.transaction.amount),1),this.database.insertTransactionData(this.transaction).then(function(n){l.util.showToast(h.DATA_SAVED,y.TOAST_TOP),l.transaction.rate="",l.transaction.amount="",l.transaction.coins=""},function(n){l.util.showToast(T.ERROR_SAVING_DATA,y.TOAST_TOP)})},l}(),E=function(){function l(l,n){this.navCtrl=l,this.util=n,this.profit=0}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad CalculatorPage")},l.prototype.calculateClicked=function(){this.util.isBlank(this.buyRate)||this.util.isBlank(this.sellRate)||this.util.isBlank(this.amount)?this.util.showToast("Fill all fields.",y.TOAST_BOTTOM):(this.profit=(parseFloat(this.sellRate)-parseFloat(this.buyRate))*(parseFloat(this.amount)/parseFloat(this.buyRate)),this.profit=this.util.roundDigit(this.profit,1))},l}(),j=function(){return function(){this.tab1Root=w,this.tab2Root=v,this.tab3Root=Y,this.tab4Root=E}}(),k=function(){return function(l,n,t,u){this.rootPage=j,l.ready().then(function(){n.styleDefault(),t.hide(),u.createDatabase()})}}(),R=function(){return function(){}}(),z=t(52),O=t(226),I=t(227),S=t(228),P=t(229),M=t(230),F=t(231),B=t(232),x=t(233),N=t(234),V=t(235),L=t(30),U=t(56),X=t(5),q=t(15),G=t(6),W=t(1),K=t(3),$=t(8),H=t(23),J=t(12),Q=t(7),ll=g.X({encapsulation:2,styles:[],data:{}}),nl=g.V("ng-component",k,function(l){return g._19(0,[(l()(),g.Z(0,0,null,null,1,"ng-component",[],null,null,null,u,ll)),g.Y(1,49152,null,0,k,[K.a,b.a,m.a,C],null,null)],null,null)},{},{},[]),tl=t(10),ul=t(49),al=t(83),ol=t(25),il=t(84),el=t(42),sl=t(24),rl=t(115),cl=t(26),dl=t(19),_l=t(35),hl=t(85),pl=t(20),gl=t(22),bl=t(62),ml=g.X({encapsulation:2,styles:[],data:{}}),fl=g.V("page-transaction",v,function(l){return g._19(0,[(l()(),g.Z(0,0,null,null,1,"page-transaction",[],null,null,null,s,ml)),g.Y(1,49152,null,0,v,[q.a,f,C,bl.a],null,null)],null,null)},{},{},[]),Tl=t(63),yl=t(64),Dl=t(82),Cl=t(17),vl=t(13),Yl=t(36),Zl=t(46),Al=t(126),wl=t(16),El=t(45),jl=g.X({encapsulation:2,styles:[],data:{}}),kl=g.V("page-summary",Y,function(l){return g._19(0,[(l()(),g.Z(0,0,null,null,1,"page-summary",[],null,null,null,r,jl)),g.Y(1,49152,null,0,Y,[q.a,f,C],null,null)],null,null)},{},{},[]),Rl=t(41),zl=g.X({encapsulation:2,styles:[],data:{}}),Ol=g.V("page-home",w,function(l){return g._19(0,[(l()(),g.Z(0,0,null,null,1,"page-home",[],null,null,null,c,zl)),g.Y(1,49152,null,0,w,[q.a,f,C],null,null)],null,null)},{},{},[]),Il=t(236),Sl=t(48),Pl=t(237),Ml=t(76),Fl=g.X({encapsulation:2,styles:[],data:{}}),Bl=g.V("ng-component",j,function(l){return g._19(0,[(l()(),g.Z(0,0,null,null,1,"ng-component",[],null,null,null,d,Fl)),g.Y(1,49152,null,0,j,[],null,null)],null,null)},{},{},[]),xl=t(114),Nl=g.X({encapsulation:2,styles:[],data:{}}),Vl=g.V("page-calculator",E,function(l){return g._19(0,[(l()(),g.Z(0,0,null,null,1,"page-calculator",[],null,null,null,_,Nl)),g.Y(1,49152,null,0,E,[q.a,f],null,null)],null,null)},{},{},[]),Ll=t(123),Ul=t(94),Xl=t(120),ql=t(37),Gl=t(101),Wl=t(189),Kl=t(54),$l=t(47),Hl=t(103),Jl=t(65),Ql=t(108),ln=t(119),nn=t(113),tn=t(188),un=t(121),an=t(32),on=t(102),en=t(122),sn=g.W(R,[z.b],function(l){return g._10([g._11(512,g.i,g.S,[[8,[O.a,I.a,S.a,P.a,M.a,F.a,B.a,x.a,N.a,nl,fl,kl,Ol,Bl,Vl]],[3,g.i],g.s]),g._11(5120,g.r,g._9,[[3,g.r]]),g._11(4608,tl.k,tl.j,[g.r,[2,tl.s]]),g._11(5120,g.b,g._0,[]),g._11(5120,g.p,g._6,[]),g._11(5120,g.q,g._7,[]),g._11(4608,p.c,p.q,[tl.c]),g._11(6144,g.D,null,[p.c]),g._11(4608,p.f,Ll.a,[]),g._11(5120,p.d,function(l,n,t,u,a){return[new p.k(l,n),new p.o(t),new p.n(u,a)]},[tl.c,g.u,tl.c,tl.c,p.f]),g._11(4608,p.e,p.e,[p.d,g.u]),g._11(135680,p.m,p.m,[tl.c]),g._11(4608,p.l,p.l,[p.e,p.m]),g._11(6144,g.B,null,[p.l]),g._11(6144,p.p,null,[p.m]),g._11(4608,g.G,g.G,[g.u]),g._11(4608,p.h,p.h,[tl.c]),g._11(4608,p.i,p.i,[tl.c]),g._11(4608,wl.k,wl.k,[]),g._11(4608,wl.c,wl.c,[]),g._11(4608,Ul.a,Ul.a,[G.a,W.a]),g._11(4608,bl.a,bl.a,[G.a,W.a]),g._11(4608,Xl.a,Xl.a,[]),g._11(4608,vl.a,vl.a,[]),g._11(4608,ql.a,ql.a,[K.a]),g._11(4608,gl.a,gl.a,[W.a,K.a,g.u,Q.a]),g._11(4608,Gl.a,Gl.a,[G.a,W.a]),g._11(5120,tl.f,Wl.b,[tl.q,[2,tl.a],W.a]),g._11(4608,tl.e,tl.e,[tl.f]),g._11(5120,Kl.b,Kl.d,[G.a,Kl.a]),g._11(5120,J.a,J.b,[G.a,Kl.b,tl.e,$l.b,g.i]),g._11(4608,Hl.a,Hl.a,[G.a,W.a,J.a]),g._11(4608,Jl.a,Jl.a,[G.a,W.a]),g._11(4608,Ql.a,Ql.a,[G.a,W.a,J.a]),g._11(4608,ln.a,ln.a,[W.a,K.a,Q.a,G.a,$.l]),g._11(4608,nn.a,nn.a,[G.a,W.a]),g._11(4608,H.a,H.a,[K.a,W.a]),g._11(4608,b.a,b.a,[]),g._11(4608,m.a,m.a,[]),g._11(4608,f,f,[nn.a,bl.a]),g._11(4608,D.a,D.a,[]),g._11(4608,C,C,[f,D.a]),g._11(512,tl.b,tl.b,[]),g._11(512,g.k,tn.a,[]),g._11(256,W.b,{},[]),g._11(1024,un.a,un.b,[]),g._11(1024,K.a,K.b,[p.b,un.a,g.u]),g._11(1024,W.a,W.c,[W.b,K.a]),g._11(512,Q.a,Q.a,[K.a]),g._11(512,an.a,an.a,[]),g._11(512,G.a,G.a,[W.a,K.a,[2,an.a]]),g._11(512,$.l,$.l,[G.a]),g._11(256,Kl.a,{links:[]},[]),g._11(512,g.h,g.h,[]),g._11(512,on.a,on.a,[g.h]),g._11(1024,$l.b,$l.c,[on.a,g.o]),g._11(1024,g.c,function(l,n,t,u,a,o,i,e,s,r,c,d,_){return[p.s(l),en.a(n),Xl.b(t,u),ln.b(a,o,i,e,s),$l.d(r,c,d,_)]},[[2,g.t],W.a,K.a,Q.a,W.a,K.a,Q.a,G.a,$.l,W.a,Kl.a,$l.b,g.u]),g._11(512,g.d,g.d,[[2,g.c]]),g._11(131584,g.f,g.f,[g.u,g.T,g.o,g.k,g.i,g.d]),g._11(512,g.e,g.e,[g.f]),g._11(512,p.a,p.a,[[3,p.a]]),g._11(512,wl.j,wl.j,[]),g._11(512,wl.d,wl.d,[]),g._11(512,wl.i,wl.i,[]),g._11(512,Wl.a,Wl.a,[]),g._11(512,R,R,[]),g._11(256,z.a,k,[]),g._11(256,tl.a,"/",[])])});Object(g.M)(),Object(p.j)().bootstrapModuleFactory(sn)}},[191]);
+webpackJsonp([0],{
+
+/***/ 113:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 113;
+
+/***/ }),
+
+/***/ 155:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 155;
+
+/***/ }),
+
+/***/ 198:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transaction_transaction__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__summary_summary__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__calculator_calculator__ = __webpack_require__(203);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var TabsPage = (function () {
+    function TabsPage() {
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__transaction_transaction__["a" /* TransactionPage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__summary_summary__["a" /* SummaryPage */];
+        this.tab4Root = __WEBPACK_IMPORTED_MODULE_4__calculator_calculator__["a" /* CalculatorPage */];
+    }
+    TabsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/tabs/tabs.html"*/`<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Transactions" tabIcon="repeat"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Summary" tabIcon="book"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Calculate" tabIcon="calculator"></ion-tab>\n</ion-tabs>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/tabs/tabs.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], TabsPage);
+    return TabsPage;
+}());
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ }),
+
+/***/ 199:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransactionPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_util__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_constants__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var TransactionPage = (function () {
+    function TransactionPage(navCtrl, util, database, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.util = util;
+        this.database = database;
+        this.alertCtrl = alertCtrl;
+        this.profit = 0;
+    }
+    TransactionPage.prototype.ionViewWillEnter = function () {
+        this.getData();
+    };
+    TransactionPage.prototype.getData = function () {
+        var _this = this;
+        this.database.fetchTransactionData().then(function (data) {
+            _this.transactionData = data;
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
+        });
+    };
+    TransactionPage.prototype.trashClicked = function () {
+        var _this = this;
+        var prompt = this.alertCtrl.create({
+            title: 'Delete Transaction !!',
+            enableBackdropDismiss: true,
+            cssClass: "prompt-alert",
+            inputs: [
+                {
+                    name: 'id',
+                    placeholder: 'Enter a No. to delete transaction.',
+                    type: 'number',
+                },
+            ],
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function (data) {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Save',
+                    handler: function (data) {
+                        _this.database.deleteTransactionData(data.id).then(function (data) {
+                            _this.getData();
+                        });
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    };
+    TransactionPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-transaction',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/transaction/transaction.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Transactions</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="trashClicked()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div class="table-responsive">\n        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">\n            <tr style="font-size: 16px;">\n                <th class="th">No.</th>\n                <th class="th">Rate</th>\n                <th class="th">Amount</th>\n                <th class="th">Coins</th>\n                <th class="th">Action</th>\n            </tr>\n            <tr *ngIf="transactionData == undefined || transactionData.length == 0" class="tr-no-data">\n              <td colspan="5" class="td">Data not available</td>\n            </tr>\n            <tr *ngFor="let tran of transactionData">\n                <td class="td-transaction-data">{{tran.id}}.</td>\n                <td class="td-transaction-data">{{tran.rate}}</td>\n                <td class="td-transaction-data">{{tran.amount}}</td>\n                <td class="td-transaction-data">{{tran.coins}}</td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'buy\'"><span class="span-action-buy">{{tran.action}}</span></td>\n                <td class="td-transaction-data" *ngIf="tran.action == \'sell\'"><span class="span-action-sell">{{tran.action}}</span></td>\n            </tr>\n        </table>\n    </div>\n\n</ion-content>\n\n<!-- <ion-footer>\n  <ion-toolbar>\n    <ion-title *ngIf="profit > 0" class="ion-title-profit"><span class="profit-title">Envisioned PROFIT : </span><span class="pos-profit">{{profit}}</span></ion-title>\n    <ion-title *ngIf="profit <= 0" class="ion-title-profit"><span class="profit-title">Envisioned PROFIT : </span><span class="neg-profit">{{profit}}</span></ion-title>\n  </ion-toolbar>\n</ion-footer> -->\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/transaction/transaction.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], TransactionPage);
+    return TransactionPage;
+}());
+
+//# sourceMappingURL=transaction.js.map
+
+/***/ }),
+
+/***/ 201:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SummaryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_util__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_constants__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var SummaryPage = (function () {
+    function SummaryPage(navCtrl, util, database) {
+        this.navCtrl = navCtrl;
+        this.util = util;
+        this.database = database;
+        this.buy = 'buy';
+        this.sell = 'sell';
+        this.deposit = 'deposit';
+        this.withdraw = 'withdraw';
+        this.profitAmt = 0;
+        this.profitDisplay = 0;
+        this.totalCoins = 0;
+        this.depositAmt = 0;
+        this.investedAmt = 0;
+        this.edit = true;
+    }
+    SummaryPage.prototype.ionViewWillEnter = function () {
+        this.getTransactionData();
+        this.getDepositData();
+    };
+    SummaryPage.prototype.getTransactionData = function () {
+        var _this = this;
+        this.database.fetchTransactionData().then(function (data) {
+            _this.transactionData = data;
+            _this.calculateProfit();
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_TRANSACTION_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
+        });
+    };
+    SummaryPage.prototype.getDepositData = function () {
+        var _this = this;
+        this.database.fetchDepositData().then(function (data) {
+            _this.depositData = data;
+            _this.calculateDeposit();
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_3__providers_constants__["a" /* ErrorMsg */].ERROR_GET_DEPOSIT_DATA, __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
+        });
+    };
+    SummaryPage.prototype.calculateProfit = function () {
+        this.profitAmt = 0;
+        this.totalCoins = 0;
+        for (var i = 0; i < this.transactionData.length; i++) {
+            if (this.transactionData[i].action == this.buy) {
+                this.profitAmt -= parseFloat(this.transactionData[i].amount);
+                this.totalCoins += parseFloat(this.transactionData[i].coins);
+            }
+            else {
+                this.profitAmt += parseFloat(this.transactionData[i].amount);
+                this.totalCoins -= parseFloat(this.transactionData[i].coins);
+            }
+        }
+        console.log("profit = ", this.profitAmt);
+        console.log("coins = ", this.totalCoins);
+        this.totalCoins = this.util.roundDigit(this.totalCoins, 8);
+        this.profitAmt = this.util.roundDigit(this.profitAmt, 1);
+        this.addInvestedAmt();
+    };
+    SummaryPage.prototype.calculateDeposit = function () {
+        this.depositAmt = 0;
+        for (var i = 0; i < this.depositData.length; i++) {
+            if (this.depositData[i].action == this.deposit) {
+                this.depositAmt += parseFloat(this.depositData[i].amount);
+            }
+            else {
+                this.depositAmt -= parseFloat(this.depositData[i].amount);
+            }
+            if (this.depositAmt < 0) {
+                this.depositAmt = 0;
+                this.database.deleteDepositData();
+            }
+            console.log("deposit = ", this.depositAmt);
+        }
+    };
+    SummaryPage.prototype.investedAmtEnter = function (event) {
+        console.log(event.target.value);
+        window.localStorage.setItem("investedAmt", event.target.value);
+        this.addInvestedAmt();
+    };
+    SummaryPage.prototype.addInvestedAmt = function () {
+        this.investedAmt = window.localStorage.getItem("investedAmt");
+        if (!this.util.isBlank(this.investedAmt)) {
+            this.profitDisplay = this.util.roundDigit(parseFloat(this.profitAmt) + parseFloat(this.investedAmt), 1);
+        }
+        else {
+            this.profitDisplay = this.util.roundDigit(this.profitAmt, 1);
+        }
+    };
+    SummaryPage.prototype.editClicked = function () {
+        if (this.edit == false) {
+            this.edit = true;
+        }
+        else {
+            this.edit = false;
+        }
+    };
+    SummaryPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-summary',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/summary/summary.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Summary</ion-title>\n    <!-- <ion-buttons end>\n      <button ion-button icon-only (click)="editClicked()">\n        <ion-icon name="create"></ion-icon>\n      </button>\n    </ion-buttons> -->\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Deposit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">Rs. {{depositAmt}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <ion-item style="padding-left: 0px; font-size: 20px">\n        <ion-input type="number" placeholder="Invested Amount" [(ngModel)]="investedAmt" (keyup)="investedAmtEnter($event)" [disabled]="edit"></ion-input>\n        <button ion-button icon-only item-right (click)="editClicked()" class="edit-invested">\n          <ion-icon name="create"></ion-icon>\n        </button>\n      </ion-item>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Coins</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">{{totalCoins}}</span>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content class="card-content">\n      <span class="left-text">Profit</span>\n      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="forward-icon"></ion-icon>\n      <span class="right-text">Rs. {{profitDisplay}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/summary/summary.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_4__providers_database__["a" /* Database */]])
+    ], SummaryPage);
+    return SummaryPage;
+}());
+
+//# sourceMappingURL=summary.js.map
+
+/***/ }),
+
+/***/ 202:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_transaction_data__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_deposit_data__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_util__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_constants__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_database__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var HomePage = (function () {
+    function HomePage(navCtrl, util, database) {
+        this.navCtrl = navCtrl;
+        this.util = util;
+        this.database = database;
+        this.toastMsg = 'All fields are mandatory to fill';
+        this.depositMsg = 'Enter deposit amount';
+        this.buy = 'buy';
+        this.sell = 'sell';
+        this.deposit = 'deposit';
+        this.withdraw = 'withdraw';
+        this.takerFee = 0.0118;
+        this.makerFee = 0.0059;
+        this.transaction = new __WEBPACK_IMPORTED_MODULE_2__models_transaction_data__["a" /* TransactionData */]();
+        this.depositData = new __WEBPACK_IMPORTED_MODULE_3__models_deposit_data__["a" /* DepositData */]();
+    }
+    HomePage.prototype.ionViewDidEnter = function () {
+    };
+    HomePage.prototype.validate = function () {
+        if (this.util.isBlank(this.transaction.rate)) {
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+        }
+        else if (this.util.isBlank(this.transaction.amount)) {
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+        }
+        else if (this.util.isBlank(this.transaction.coins)) {
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+        }
+        else if (this.util.isBlank(this.transaction.trading_fees)) {
+            this.util.showToastWithButton(this.toastMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+        }
+        else {
+            this.transaction.date = this.util.getTimeDate().toString();
+            this.saveTransactionData();
+        }
+    };
+    HomePage.prototype.buyClicked = function () {
+        this.transaction.action = this.buy;
+        this.validate();
+    };
+    HomePage.prototype.sellClicked = function () {
+        this.transaction.action = this.sell;
+        this.validate();
+    };
+    HomePage.prototype.depositClicked = function () {
+        if (this.util.isBlank(this.depositData.deposit_amount)) {
+            this.util.showToastWithButton(this.depositMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+        }
+        else {
+            this.depositData.date = this.util.getTimeDate().toString();
+            this.depositData.action = this.deposit;
+            this.depositData.amount = this.depositData.deposit_amount;
+            this.saveDepositData();
+        }
+    };
+    HomePage.prototype.withdrawClicked = function () {
+        if (this.util.isBlank(this.depositData.withdraw_amount)) {
+            this.util.showToastWithButton(this.depositMsg, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP, true, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].OK);
+        }
+        else {
+            this.depositData.date = this.util.getTimeDate().toString();
+            this.depositData.action = this.withdraw;
+            this.depositData.amount = this.depositData.withdraw_amount;
+            this.saveDepositData();
+        }
+    };
+    HomePage.prototype.saveDepositData = function () {
+        var _this = this;
+        this.database.insertDepositData(this.depositData).then(function (data) {
+            // this.database.selectAllFromTable('deposit_tbl')
+            _this.util.basicAlert(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].DATA_SAVED, "");
+            _this.depositData.deposit_amount = "";
+            _this.depositData.withdraw_amount = "";
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
+        });
+    };
+    HomePage.prototype.saveTransactionData = function () {
+        var _this = this;
+        if (this.transaction.action == this.buy) {
+            this.transaction.coins = (parseFloat(this.transaction.coins) - (parseFloat(this.transaction.coins) * parseFloat(this.transaction.trading_fees))).toString();
+        }
+        if (this.transaction.action == this.sell) {
+            this.transaction.amount = (parseFloat(this.transaction.amount) - (parseFloat(this.transaction.amount) * parseFloat(this.transaction.trading_fees))).toString();
+        }
+        this.transaction.coins = this.util.roundDigit(parseFloat(this.transaction.coins), 8);
+        this.transaction.amount = this.util.roundDigit(parseFloat(this.transaction.amount), 1);
+        this.database.insertTransactionData(this.transaction).then(function (data) {
+            // this.util.basicAlert(StringConstant.DATA_SAVED, "")
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["b" /* StringConstant */].DATA_SAVED, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
+            _this.transaction.rate = "";
+            _this.transaction.amount = "";
+            _this.transaction.coins = "";
+        }, function (error) {
+            _this.util.showToast(__WEBPACK_IMPORTED_MODULE_5__providers_constants__["a" /* ErrorMsg */].ERROR_SAVING_DATA, __WEBPACK_IMPORTED_MODULE_5__providers_constants__["c" /* ToastConstant */].TOAST_TOP);
+        });
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/home/home.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <!-- <ion-buttons start>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n    <ion-title>Home</ion-title>\n\n    <!-- <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-content>\n        <ion-item>\n          <ion-label stacked>Rate</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.rate"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label stacked>Amount</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.amount"></ion-input>\n        </ion-item>\n        <ion-item class="ion-item-border">\n          <ion-label stacked>Coins</ion-label>\n          <ion-input type="number" [(ngModel)]="transaction.coins"></ion-input>\n        </ion-item>\n\n        <ion-list radio-group [(ngModel)]="transaction.trading_fees">\n          <ion-item>\n            <ion-label class="label-fees">TakerFees</ion-label>\n            <ion-radio value="0.0118"></ion-radio>\n          </ion-item>\n          <ion-item>\n            <ion-label class="label-fees">MakerFees</ion-label>\n            <ion-radio value="0.0059"></ion-radio>\n          </ion-item>\n        </ion-list>\n\n        <ion-item class="remove-bottom">\n          <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>\n          <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>\n        </ion-item>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-item>\n      <ion-input type="number" [(ngModel)]="depositData.deposit_amount" placeholder="Amount" class=""></ion-input>\n      <button ion-button item-right color="primary" class="button-deposit" (click)="depositClicked()">Deposit</button>\n  </ion-item>\n  <ion-item>\n      <ion-input type="number" [(ngModel)]="depositData.withdraw_amount" placeholder="Amount" class=""></ion-input>\n      <button ion-button item-right color="primary" class="button-deposit" (click)="withdrawClicked()">Withdraw</button>\n  </ion-item>\n\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_6__providers_database__["a" /* Database */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 203:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalculatorPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_util__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_constants__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CalculatorPage = (function () {
+    function CalculatorPage(navCtrl, util) {
+        this.navCtrl = navCtrl;
+        this.util = util;
+        this.profit = 0;
+    }
+    CalculatorPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CalculatorPage');
+    };
+    CalculatorPage.prototype.calculateClicked = function () {
+        if (this.util.isBlank(this.buyRate) || this.util.isBlank(this.sellRate) || this.util.isBlank(this.amount)) {
+            this.util.showToast("Fill all fields.", __WEBPACK_IMPORTED_MODULE_3__providers_constants__["c" /* ToastConstant */].TOAST_BOTTOM);
+        }
+        else {
+            this.profit = (parseFloat(this.sellRate) - parseFloat(this.buyRate)) * (parseFloat(this.amount) / parseFloat(this.buyRate));
+            this.profit = this.util.roundDigit(this.profit, 1);
+        }
+    };
+    CalculatorPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-calculator',template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/calculator/calculator.html"*/`<ion-header>\n  <ion-toolbar color="primary">\n    <ion-title>Calculator</ion-title>\n    <!-- <ion-buttons end>\n      <button ion-button icon-only (click)="editClicked()">\n        <ion-icon name="create"></ion-icon>\n      </button>\n    </ion-buttons> -->\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <!-- <ion-list> -->\n    <ion-item >\n      <ion-label stacked>Buy Rate</ion-label>\n      <ion-input type="number" placeholder="Enter Buy Rate" [(ngModel)]="buyRate"></ion-input>\n    </ion-item>\n\n    <ion-item >\n      <ion-label stacked>Sell Rate</ion-label>\n      <ion-input type="number" placeholder="Enter Sell Rate" [(ngModel)]="sellRate"></ion-input>\n    </ion-item>\n\n    <ion-item >\n      <ion-label stacked>Amount</ion-label>\n      <ion-input type="number" placeholder="Enter Amount" [(ngModel)]="amount"></ion-input>\n    </ion-item>\n  <!-- </ion-list> -->\n\n  <ion-item no-lines class="ion-item-center">\n    <button ion-button color="primary" class="button-calculate" (click)="calculateClicked()">Calculate</button>\n  </ion-item>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title class="ion-title-profit"><span class="profit-title">Profit : </span><span class="pos-profit">{{profit}}</span></ion-title>\n  </ion-toolbar>\n</ion-footer>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/pages/calculator/calculator.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_util__["a" /* Util */]])
+    ], CalculatorPage);
+    return CalculatorPage;
+}());
+
+//# sourceMappingURL=calculator.js.map
+
+/***/ }),
+
+/***/ 204:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(228);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 228:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_transaction_transaction__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_summary_summary__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_calculator_calculator__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_util__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_database__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_sqlite__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_scrollable_tabs_scrollable_tabs__ = __webpack_require__(282);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_transaction_transaction__["a" /* TransactionPage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_summary_summary__["a" /* SummaryPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_calculator_calculator__["a" /* CalculatorPage */],
+                __WEBPACK_IMPORTED_MODULE_14__components_scrollable_tabs_scrollable_tabs__["a" /* ScrollableTabs */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                    links: []
+                })
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_transaction_transaction__["a" /* TransactionPage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_summary_summary__["a" /* SummaryPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_calculator_calculator__["a" /* CalculatorPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_11__providers_util__["a" /* Util */],
+                __WEBPACK_IMPORTED_MODULE_12__providers_database__["a" /* Database */],
+                __WEBPACK_IMPORTED_MODULE_13__ionic_native_sqlite__["a" /* SQLite */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 270:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_database__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var MyApp = (function () {
+    function MyApp(platform, statusBar, splashScreen, database) {
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */];
+        platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            statusBar.styleDefault();
+            splashScreen.hide();
+            database.createDatabase();
+        });
+    }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/app/app.html"*/`<ion-nav [root]="rootPage"></ion-nav>\n`/*ion-inline-end:"/Users/ashaygupta/Desktop/My Folder/myApps/Ionic Projects/Bitcoin Log/Working/src/app/app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_5__providers_database__["a" /* Database */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 280:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransactionData; });
+var TransactionData = (function () {
+    function TransactionData() {
+    }
+    return TransactionData;
+}());
+
+//# sourceMappingURL=transaction-data.js.map
+
+/***/ }),
+
+/***/ 281:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepositData; });
+var DepositData = (function () {
+    function DepositData() {
+    }
+    return DepositData;
+}());
+
+//# sourceMappingURL=deposit-data.js.map
+
+/***/ }),
+
+/***/ 282:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScrollableTabs; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ScrollableTabs = (function () {
+    function ScrollableTabs(elemRef, renderer) {
+        this.elemRef = elemRef;
+        this.renderer = renderer;
+        this.opts = {};
+        this.tabs = [];
+    }
+    ScrollableTabs.prototype.ngOnChanges = function (changes) {
+        var _this = this;
+        if (changes.hasOwnProperty('opts')) {
+            if (changes['opts'].currentValue.refresh) {
+                setTimeout(function () {
+                    _this.setAnchorStyles();
+                    _this.scrollToselectedTab();
+                }, 300);
+            }
+        }
+    };
+    ScrollableTabs.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.nativeTabbar = this.ionTabs._tabbar.nativeElement;
+        this.tabs = this.ionTabs._tabs;
+        this.currentTabIndex = typeof (this.ionTabs.selectedIndex) == "undefined" ? 0 : this.ionTabs.selectedIndex;
+        this.ionTabs.ionChange.subscribe(function () {
+            _this.scrollToselectedTab();
+        });
+        var _loop_1 = function (i) {
+            this_1.tabs[i].ionSelect.subscribe(function () {
+                _this.currentTabIndex = i;
+            });
+        };
+        var this_1 = this;
+        for (var i = 0; i < this.tabs.length; i++) {
+            _loop_1(i);
+        }
+        // set tabbar overflow-x: scroll
+        this.renderer.setElementStyle(this.nativeTabbar, "overflow-x", "scroll");
+        // set tabbar overflow-y: hidden
+        this.renderer.setElementStyle(this.nativeTabbar, "overflow-y", "hidden");
+        this.setAnchorStyles();
+        this.scrollToselectedTab();
+    };
+    ScrollableTabs.prototype.onResize = function (event) {
+        var _this = this;
+        this.setAnchorStyles();
+        setTimeout(function () {
+            _this.scrollToselectedTab();
+        }, 300);
+    };
+    ScrollableTabs.prototype.setAnchorStyles = function () {
+        if (typeof (this.nativeTabbar) != "undefined") {
+            var tabBar_width = this.nativeTabbar.clientWidth;
+            var numOfTabs = this.tabs.length;
+            var numOfVisibleAnchors = 0;
+            var sumOfVisibleAnchorWidth = 0;
+            // loop through tab elements in tabs
+            for (var i = 0; i < numOfTabs; i++) {
+                var element = this.nativeTabbar.children[i];
+                // when Tab visible (effecting show property)
+                if (this.tabs[i]._isShown) {
+                    numOfVisibleAnchors++;
+                    // set <a> display: inline-table
+                    this.renderer.setElementStyle(element, 'display', 'inline-table');
+                    // set <a> width: 6rem
+                    this.renderer.setElementStyle(element, 'width', '6rem');
+                    // extra padding for title-only tags only
+                    if (element.classList.contains("has-title-only")) {
+                        // set <a> padding-top: 1.5rem
+                        this.renderer.setElementStyle(element, 'padding-top', '1.5rem');
+                    }
+                    sumOfVisibleAnchorWidth += element.clientWidth;
+                }
+                else {
+                    // set <a> display: none
+                    this.renderer.setElementStyle(element, 'display', 'none');
+                }
+            }
+            // to prevent extra space at end
+            if (sumOfVisibleAnchorWidth < tabBar_width) {
+                var anchorWidth = tabBar_width / numOfVisibleAnchors;
+                for (var i = 0; i < numOfTabs; i++) {
+                    var element = this.nativeTabbar.children[i];
+                    // when Tab not not visible effecting show property
+                    if (!element.classList.contains("tab-hidden")) {
+                        this.renderer.setElementStyle(element, 'width', anchorWidth + 'px');
+                    }
+                }
+            }
+        }
+    };
+    ScrollableTabs.prototype.scrollToselectedTab = function () {
+        if (typeof this.nativeTabbar != 'undefined') {
+            var tabBar_width = this.nativeTabbar.clientWidth;
+            var selectedTab = this.nativeTabbar.children[this.currentTabIndex];
+            var selectedTab_Width = selectedTab.clientWidth;
+            var selectedTab_LeftOffset = document.getElementById(selectedTab.id).offsetLeft;
+            var selectedTab_mid = selectedTab_LeftOffset + (selectedTab_Width / 2);
+            var newScrollLeft = selectedTab_mid - (tabBar_width / 2);
+            this.scrollXTo(newScrollLeft, 300).then(function () { });
+        }
+    };
+    ScrollableTabs.prototype.scrollXTo = function (x, duration) {
+        if (duration === void 0) { duration = 300; }
+        // scroll animation loop w/ easing
+        var tabbar = this.nativeTabbar;
+        if (!tabbar) {
+            // invalid element
+            return Promise.resolve();
+        }
+        x = x || 0;
+        var originalRaf = (window[window['Zone']['__symbol__']('requestAnimationFrame')] || window[window['Zone']['__symbol__']('webkitRequestAnimationFrame')]);
+        var nativeRaf = originalRaf !== undefined ? originalRaf['bind'](window) : window.requestAnimationFrame.bind(window);
+        var fromX = tabbar.scrollLeft;
+        var maxAttempts = (duration / 16) + 100;
+        return new Promise(function (resolve) {
+            var startTime;
+            var attempts = 0;
+            var isPlaying;
+            // scroll loop
+            function step() {
+                attempts++;
+                if (!tabbar || !isPlaying || attempts > maxAttempts) {
+                    isPlaying = false;
+                    resolve();
+                    return;
+                }
+                var time = Math.min(1, ((Date.now() - startTime) / duration));
+                // where .5 would be 50% of time on a linear scale easedT gives a
+                // fraction based on the easing method
+                var easedT = (--time) * time * time + 1;
+                if (fromX !== x) {
+                    tabbar.scrollLeft = Math.floor((easedT * (x - fromX)) + fromX);
+                }
+                if (easedT < 1) {
+                    nativeRaf(step);
+                }
+                else {
+                    // done
+                    resolve();
+                }
+            }
+            // start scroll loop
+            isPlaying = true;
+            // chill out for a frame first
+            nativeRaf(function () {
+                startTime = Date.now();
+                nativeRaf(step);
+            });
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('scrollable-tabs'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Tabs */])
+    ], ScrollableTabs.prototype, "ionTabs", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('opts'),
+        __metadata("design:type", Object)
+    ], ScrollableTabs.prototype, "opts", void 0);
+    ScrollableTabs = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+            selector: '[scrollable-tabs]',
+            host: {
+                '(window:resize)': 'onResize($event)'
+            }
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
+    ], ScrollableTabs);
+    return ScrollableTabs;
+}());
+
+//# sourceMappingURL=scrollable-tabs.js.map
+
+/***/ }),
+
+/***/ 32:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Util; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var Util = (function () {
+    function Util(toastCtrl, alertCtrl) {
+        this.toastCtrl = toastCtrl;
+        this.alertCtrl = alertCtrl;
+    }
+    Util.prototype.basicAlert = function (title, msg) {
+        var alert = this.alertCtrl.create({
+            title: title,
+            message: msg,
+            enableBackdropDismiss: false,
+            buttons: [
+                {
+                    text: 'OK',
+                    handler: function () {
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    Util.prototype.isBlank = function (str) {
+        if (str == null || str == 'null' || str == undefined || str == 'undefined' || str.trim().length == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    Util.prototype.showToast = function (msg, position) {
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 4000,
+            position: position,
+            dismissOnPageChange: true
+        });
+        toast.present();
+    };
+    Util.prototype.showToastWithButton = function (msg, position, showCloseButton, closeButtonText) {
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 4000,
+            position: position,
+            showCloseButton: showCloseButton,
+            closeButtonText: closeButtonText,
+            dismissOnPageChange: true
+        });
+        toast.present();
+    };
+    Util.prototype.removeNull = function (str) {
+        if (str == "null" || str == null || str == undefined) {
+            return "";
+        }
+        else {
+            return str;
+        }
+    };
+    Util.prototype.getTimeDate = function () {
+        return new Date().getTime();
+    };
+    Util.prototype.roundDigit = function (item, digits) {
+        return (Math.round(item * Math.pow(10, digits)) / Math.pow(10, digits)).toString();
+    };
+    Util = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], Util);
+    return Util;
+}());
+
+//# sourceMappingURL=util.js.map
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Database; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_sqlite__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_util__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var Database = (function () {
+    function Database(util, sqlite) {
+        this.util = util;
+        this.sqlite = sqlite;
+    }
+    Database.prototype.createDatabase = function () {
+        var _this = this;
+        this.sqlite.create({ name: "bitcoin.db", location: "default" }).then(function (db) {
+            _this.db = db;
+            _this.createTable();
+        }, function (error) {
+            console.log("Error in creating bitcoin.db");
+        });
+    };
+    Database.prototype.createTable = function () {
+        this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, coins TEXT, action TEXT, date TEXT)', {}).catch(function (e) { return console.log("Error in creating transaction_tbl", e); });
+        this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, action TEXT, date TEXT)', {}).catch(function (e) { return console.log("Error in creating deposit_tbl", e); });
+        console.log("Tables are created");
+    };
+    Database.prototype.selectAllFromTable = function (tblName) {
+        var query = "SELECT * FROM " + tblName;
+        this.db.executeSql(query, []).then(function (data) {
+            for (var i = 0; i < data.rows.length; i++) {
+                console.log("All data from " + tblName + " --> ", data.rows.item(i));
+            }
+        }, function (error) {
+            console.log("DB error_selectAllFromTable ", error);
+        });
+    };
+    Database.prototype.insertTransactionData = function (transaction) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var transactionData = [
+                _this.util.removeNull(transaction.rate),
+                _this.util.removeNull(transaction.amount),
+                _this.util.removeNull(transaction.coins),
+                _this.util.removeNull(transaction.action),
+                _this.util.removeNull(transaction.date)
+            ];
+            var query = "INSERT INTO transaction_tbl (rate, amount, coins, action, date) VALUES (?,?,?,?,?)";
+            _this.db.executeSql(query, transactionData).then(function (data) {
+                resolve(data);
+            }, function (error) {
+                console.log("DB error_insertTransactionData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database.prototype.fetchTransactionData = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var query = "SELECT * FROM transaction_tbl ORDER BY id DESC";
+            _this.db.executeSql(query, []).then(function (data) {
+                var transaction_data = [];
+                for (var i = 0; i < data.rows.length; i++) {
+                    transaction_data.push(data.rows.item(i));
+                }
+                resolve(transaction_data);
+            }, function (error) {
+                console.log("DB error_insertTransactionData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database.prototype.insertDepositData = function (deposit) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var depositData = [
+                _this.util.removeNull(deposit.amount),
+                _this.util.removeNull(deposit.action),
+                _this.util.removeNull(deposit.date)
+            ];
+            var query = "INSERT INTO deposit_tbl (amount, action, date) VALUES (?,?,?)";
+            _this.db.executeSql(query, depositData).then(function (data) {
+                resolve(data);
+            }, function (error) {
+                console.log("DB error_insertDepositData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database.prototype.fetchDepositData = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var query = "SELECT * FROM deposit_tbl";
+            _this.db.executeSql(query, []).then(function (data) {
+                var deposit_data = [];
+                for (var i = 0; i < data.rows.length; i++) {
+                    deposit_data.push(data.rows.item(i));
+                }
+                resolve(deposit_data);
+            }, function (error) {
+                console.log("DB error_fetchDepositData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database.prototype.deleteTransactionData = function (id) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var query = "DELETE FROM transaction_tbl WHERE id = '" + id + "'";
+            _this.db.executeSql(query, []).then(function (data) {
+                resolve(data);
+            }, function (error) {
+                console.log("DB error_deleteTransactionData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database.prototype.deleteDepositData = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var query = "DELETE FROM deposit_tbl";
+            _this.db.executeSql(query, []).then(function (data) {
+                resolve(data);
+            }, function (error) {
+                console.log("DB error_deleteDepositData ", error);
+                reject(error);
+            });
+        });
+    };
+    Database = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_util__["a" /* Util */], __WEBPACK_IMPORTED_MODULE_1__ionic_native_sqlite__["a" /* SQLite */]])
+    ], Database);
+    return Database;
+}());
+
+//# sourceMappingURL=database.js.map
+
+/***/ }),
+
+/***/ 52:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return StringConstant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ErrorMsg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ToastConstant; });
+var StringConstant;
+(function (StringConstant) {
+    StringConstant["OK"] = "OK";
+    StringConstant["DATA_SAVED"] = "Data saved";
+})(StringConstant || (StringConstant = {}));
+var ErrorMsg;
+(function (ErrorMsg) {
+    ErrorMsg["ERROR_SAVING_DATA"] = "Error in saving data";
+    ErrorMsg["ERROR_GET_TRANSACTION_DATA"] = "Error in getting transaction data";
+    ErrorMsg["ERROR_GET_DEPOSIT_DATA"] = "Error in getting deposit data";
+})(ErrorMsg || (ErrorMsg = {}));
+var ToastConstant;
+(function (ToastConstant) {
+    ToastConstant["TOAST_TOP"] = "top";
+    ToastConstant["TOAST_MIDDLE"] = "middle";
+    ToastConstant["TOAST_BOTTOM"] = "bottom";
+})(ToastConstant || (ToastConstant = {}));
+//# sourceMappingURL=constants.js.map
+
+/***/ })
+
+},[204]);
+//# sourceMappingURL=main.js.map
