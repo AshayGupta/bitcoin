@@ -98,10 +98,10 @@ export class SummaryPage {
   private addInvestedAmt(){
     this.investedAmt = window.localStorage.getItem("investedAmt");
     if(!this.util.isBlank(this.investedAmt)){
-      this.profitDisplay = this.profitAmt + parseFloat(this.investedAmt);
+      this.profitDisplay = this.util.roundDigit(parseFloat(this.profitAmt) + parseFloat(this.investedAmt), 1);
     }
     else{
-      this.profitDisplay = this.profitAmt;
+      this.profitDisplay = this.util.roundDigit(this.profitAmt, 1);
     }
   }
 
