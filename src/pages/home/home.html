@@ -36,17 +36,6 @@
           <ion-input type="number" [(ngModel)]="transaction.coins"></ion-input>
         </ion-item>
 
-        <ion-list radio-group [(ngModel)]="transaction.trading_fees">
-          <ion-item>
-            <ion-label class="label-fees">TakerFees</ion-label>
-            <ion-radio value="0.0118"></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label class="label-fees">MakerFees</ion-label>
-            <ion-radio value="0.0059"></ion-radio>
-          </ion-item>
-        </ion-list>
-
         <ion-item class="remove-bottom">
           <button ion-button color="danger" outline (click)="buyClicked()" class="button-buy">Buy</button>
           <button ion-button color="secondary" outline (click)="sellClicked()" class="button-sell">Sell</button>
