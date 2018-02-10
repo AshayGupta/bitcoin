@@ -14,19 +14,26 @@ export class Database{
   public constructor(private util: Util, private sqlite: SQLite) {}
 
   public createDatabase(){
-      this.sqlite.create({ name: "bitcoin.db", location: "default" }).then((db: SQLiteObject) => {
-        this.db = db
-        this.createTable()
-      },(error) => {
-        console.log("Error in creating bitcoin.db");
+      return new Promise((resolve, reject) => {
+        this.sqlite.create({ name: "bitcoin.db", location: "default" }).then((db: SQLiteObject) => {
+          this.db = db
+          resolve('')
+        },(error) => {
+          console.log("Error in creating bitcoin.db");
+        });
       });
   }
 
   public createTable(){
-    this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, coins TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating transaction_tbl", e));
-    this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating deposit_tbl", e));
+    this.db.executeSql('CREATE TABLE IF NOT EXISTS transaction_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, rate TEXT, amount TEXT, coins TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating transaction_tbl ", e));
+    this.db.executeSql('CREATE TABLE IF NOT EXISTS deposit_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, amount TEXT, action TEXT, date TEXT)', {}).catch(e => console.log("Error in creating deposit_tbl ", e));
 
+    this.alterTable()
     console.log("Tables are created");
+  }
+
+  public alterTable(){
+    this.db.executeSql("ALTER TABLE transaction_tbl ADD COLUMN trans_selected TEXT",[]).catch(e => console.log("Column trans_selected is not altered. ", e));
   }
 
 
@@ -48,16 +55,36 @@ export class Database{
         this.util.removeNull(transaction.amount),
         this.util.removeNull(transaction.coins),
         this.util.removeNull(transaction.action),
-        this.util.removeNull(transaction.date)
+        this.util.removeNull(transaction.date),
+        this.util.removeNull(transaction.trans_selected),
       ]
 
-      let query = "INSERT INTO transaction_tbl (rate, amount, coins, action, date) VALUES (?,?,?,?,?)";
+      let query = "INSERT INTO transaction_tbl (rate, amount, coins, action, date, trans_selected) VALUES (?,?,?,?,?,?)";
       this.db.executeSql(query, transactionData).then((data) => {
         resolve(data)
       },(error) => {
         console.log("DB error_insertTransactionData ", error)
         reject(error)
       })
+    });
+  }
+
+  public updateTransactionData(transaction: TransactionData){
+    let transactionData = [
+      // this.util.removeNull(transaction.rate),
+      // this.util.removeNull(transaction.amount),
+      // this.util.removeNull(transaction.coins),
+      // this.util.removeNull(transaction.action),
+      // this.util.removeNull(transaction.date),
+      this.util.removeNull(transaction.trans_selected)
+    ]
+    return new Promise((resolve, reject) => {
+      let updateQuery = "UPDATE transaction_tbl SET trans_selected=? WHERE id='"+transaction.id+"' ";
+      this.db.executeSql(updateQuery, transactionData).then((data) => {
+        resolve(data);
+      },(error) => {
+        console.log("DB error_updateTransactionData ", error)
+      });
     });
   }
 

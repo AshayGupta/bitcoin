@@ -20,7 +20,9 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
-      database.createDatabase();
+      database.createDatabase().then((data) => {
+        database.createTable();
+      });
     });
   }
 }

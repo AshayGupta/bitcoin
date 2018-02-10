@@ -5,6 +5,7 @@ import { TransactionData } from '../../models/transaction-data';
 import { Util } from '../../providers/util';
 import { StringConstant, ToastConstant, ErrorMsg } from '../../providers/constants';
 import { Database } from '../../providers/database';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -13,19 +14,24 @@ import { Database } from '../../providers/database';
 })
 export class TransactionPage {
 
-  private transactionData: TransactionData[];
+  private transactionData: TransactionData[] = [];
   private profit: any = 0;
 
   constructor(public navCtrl: NavController, public util: Util, public database: Database, public alertCtrl: AlertController) {
   }
 
-  ionViewWillEnter(){
+  ionViewDidEnter(){
     this.getData()
   }
 
   private getData(){
     this.database.fetchTransactionData().then((data: TransactionData[]) => {
       this.transactionData = data;
+      // for(let i=0; i<this.transactionData.length; i++){
+      //   if(this.transactionData[i].trans_selected == 'true'){
+      //     $('tr#tran_id' + this.transactionData[i].id).css("cssText", "color: yellow !important;");
+      //   }
+      // }
     },(error) => {
       this.util.showToast(ErrorMsg.ERROR_GET_TRANSACTION_DATA, ToastConstant.TOAST_TOP,)
     });
@@ -61,6 +67,19 @@ export class TransactionPage {
         ]
       });
       prompt.present();
+  }
+
+  private plus_clicked(tran: TransactionData, selected: string){
+    tran.trans_selected = selected;
+    // if(selected == 'false'){
+    //   $('tr#tran_id' + tran.id).css('background-color', 'white');
+    // }
+    // else{
+    //   $('tr#tran_id' + tran.id).css('background-color', 'lightgrey');
+    // }
+    this.database.updateTransactionData(tran).then((data) => {
+
+    });
   }
 
 

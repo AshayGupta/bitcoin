@@ -15,6 +15,7 @@
     <div class="table-responsive">
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
             <tr style="font-size: 16px;">
+                <th class="th"></th>
                 <th class="th">No.</th>
                 <th class="th">Rate</th>
                 <th class="th">Amount</th>
@@ -22,9 +23,11 @@
                 <th class="th">Action</th>
             </tr>
             <tr *ngIf="transactionData == undefined || transactionData.length == 0" class="tr-no-data">
-              <td colspan="5" class="td">Data not available</td>
+              <td colspan="6" class="td">Data not available</td>
             </tr>
-            <tr *ngFor="let tran of transactionData">
+            <tr *ngFor="let tran of transactionData" id="{{'tran_id' + tran.id}}">
+                <td class="td-transaction-data add-circle" *ngIf="tran.trans_selected == 'false' || tran.trans_selected == null"><ion-icon name="add-circle" (click)="plus_clicked(tran,'true')"></ion-icon></td>
+                <td class="td-transaction-data checkmark-circle" *ngIf="tran.trans_selected == 'true'"><ion-icon name="checkmark-circle" (click)="plus_clicked(tran,'false')"></ion-icon></td>
                 <td class="td-transaction-data">{{tran.id}}.</td>
                 <td class="td-transaction-data">{{tran.rate}}</td>
                 <td class="td-transaction-data">{{tran.amount}}</td>

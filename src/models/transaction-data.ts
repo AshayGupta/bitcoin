@@ -6,4 +6,5 @@ export class TransactionData{
   action: string;
   date: string;
   trading_fees: string;
+  trans_selected: string;
 }

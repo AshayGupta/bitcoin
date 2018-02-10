@@ -46,7 +46,8 @@ export class HomePage {
       this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
     }
     else{
-      this.transaction.date = this.util.getTimeDate().toString()
+      this.transaction.date = this.util.getTimeDate().toString();
+      this.transaction.trans_selected = 'false';
       this.saveTransactionData()
     }
   }
