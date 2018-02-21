@@ -42,9 +42,9 @@ export class HomePage {
     else if(this.util.isBlank(this.transaction.coins)){
       this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
     }
-    else if(this.util.isBlank(this.transaction.trading_fees)){
-      this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
-    }
+    // else if(this.util.isBlank(this.transaction.trading_fees)){
+    //   this.util.showToastWithButton(this.toastMsg, ToastConstant.TOAST_TOP, true, StringConstant.OK)
+    // }
     else{
       this.transaction.date = this.util.getTimeDate().toString();
       this.transaction.trans_selected = 'false';

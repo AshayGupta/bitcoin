@@ -5,6 +5,6 @@ export class TransactionData{
   coins: string;
   action: string;
   date: string;
-  trading_fees: string;
+  trading_fees: string = '0';
   trans_selected: string;
 }
