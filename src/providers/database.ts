@@ -34,6 +34,7 @@ export class Database{
 
   public alterTable(){
     this.db.executeSql("ALTER TABLE transaction_tbl ADD COLUMN trans_selected TEXT",[]).catch(e => console.log("Column trans_selected is not altered. ", e));
+    // this.db.executeSql("ALTER TABLE transaction_tbl ADD COLUMN invested_amt TEXT",[]).catch(e => console.log("Column invested_amt is not altered. ", e));
   }
 
 

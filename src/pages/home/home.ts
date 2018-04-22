@@ -113,6 +113,7 @@ export class HomePage {
       this.transaction.rate = ""
       this.transaction.amount = ""
       this.transaction.coins = ""
+      // this.transaction = new TransactionData();
     },(error) => {
       this.util.showToast(ErrorMsg.ERROR_SAVING_DATA, ToastConstant.TOAST_TOP)
     });

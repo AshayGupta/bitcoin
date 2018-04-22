@@ -90,14 +90,25 @@ export class SummaryPage {
   }
 
   private investedAmtEnter(event){
-    console.log(event.target.value)
-    window.localStorage.setItem("investedAmt", event.target.value);
-    this.addInvestedAmt()
+    // console.log(event.target.value)
+    // window.localStorage.setItem("investedAmt", event.target.value);
+    // this.addInvestedAmt()
   }
 
   private addInvestedAmt(){
-    this.investedAmt = window.localStorage.getItem("investedAmt");
-    if(!this.util.isBlank(this.investedAmt)){
+    // this.investedAmt = window.localStorage.getItem("investedAmt");
+    this.investedAmt = 0;
+    for(let i=0; i<this.transactionData.length; i++){
+      if(this.transactionData[i].trans_selected == 'true'){
+        this.investedAmt += parseFloat(this.transactionData[i].amount)
+      }
+    }
+
+    // if(parseFloat(this.investedAmt) > parseFloat(this.depositAmt)){
+    //   this.investedAmt = parseFloat(this.depositAmt)
+    // }
+
+    if(this.investedAmt != 0){
       this.profitDisplay = this.util.roundDigit(parseFloat(this.profitAmt) + parseFloat(this.investedAmt), 1);
     }
     else{
@@ -106,12 +117,12 @@ export class SummaryPage {
   }
 
   private editClicked(){
-    if(this.edit == false){
-      this.edit = true;
-    }
-    else{
-      this.edit = false;
-    }
+    // if(this.edit == false){
+    //   this.edit = true;
+    // }
+    // else{
+    //   this.edit = false;
+    // }
   }
 
 
